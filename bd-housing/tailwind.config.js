@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+      colors:{
+        primary: '#181A20',
+      }
+    },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light"]
+  }
  }
