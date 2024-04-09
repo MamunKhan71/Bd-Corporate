@@ -5,6 +5,10 @@ const FeaturedProperties = () => {
         <div className="mt-24 container mx-auto space-y-4">
             <h1 className="text-center font-bold text-3xl">Our Featured Properties</h1>
             <p className="text-center">Aliquam lacinia diam quis lacus euismod</p>
+            <div className="flex gap-4 justify-end items-center">
+                <button className="bg-primary btn text-white">For Sale</button>
+                <button className="border-primary btn border-2 text-primary bg-transparent">For Rent</button>
+            </div>
             <div className="grid grid-cols-4 gap-6 py-12">
                 <div className="card card-compact bg-base-100 shadow-xl">
                     <figure><img className="h-72 object-cover" src="images/header3.jpg" alt="Shoes" /></figure>

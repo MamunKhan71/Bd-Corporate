@@ -1,5 +1,6 @@
 import Cities from "../components/Cities";
 import CompanySlider from "../components/CompanySlider";
+import ContactSection from "../components/ContactSection";
 import FeaturedProperties from "../components/FeaturedProperties";
 import FeaturedSection from "../components/FeaturedSection";
 import Features from "../components/Features";
@@ -18,6 +19,7 @@ const Home = () => {
             <FeaturedSection />
             <FeaturedProperties/>
             <Testimonial />
+            <ContactSection/>
 
         </div>
     );
