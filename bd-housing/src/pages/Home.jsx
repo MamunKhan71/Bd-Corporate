@@ -15,15 +15,17 @@ const Home = () => {
             <div className="h-[80dvh]">
                 <Hero />
             </div>
-            <CompanySlider />
-            <About/>
-            <Cities/>
-            <Features />
-            <Pricing/>
-            <FeaturedSection />
-            <FeaturedProperties/>
-            <Testimonial />
-            <ContactSection/>
+            <div className="space-y-48">
+                <CompanySlider />
+                <About />
+                <Cities />
+                <Features />
+                <Pricing />
+                <FeaturedSection />
+                <FeaturedProperties />
+                <Testimonial />
+                <ContactSection />
+            </div>
         </div>
     );
 };

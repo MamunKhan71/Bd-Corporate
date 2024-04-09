@@ -6,11 +6,14 @@ import {
 import "./index.css";
 import router from "./routes/routes";
 import AuthProvider from "./provider/AuthProvider";
+import ContextProvider from "./provider/ContextProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <ContextProvider>
+        <RouterProvider router={router} />
+      </ContextProvider>
     </AuthProvider>
   </React.StrictMode>
 ); 

@@ -3,17 +3,17 @@ const About = () => {
     return (
         <div className="my-24 container mx-auto">
             <div className="grid grid-cols-2 gap-6 w-full">
-                <div className="bg-[url(/images/PolygonLuminary.svg)] rounded-xl w-full h-96 p-12 bg-cover space-y-4 text-white">
+                <div className="bg-[url(/images/PolygonLuminary.svg)] rounded-none w-full h-full p-12 bg-cover space-y-4 text-white">
                     <h1 className="text-white font-semibold text-2xl max-w-xs">The New Way to Find
                         Your Home</h1>
                     <p>From as low as $10 per day with
                         limited time offer discounts.</p>
-                    <button className="btn bg-primary text-white">
+                    <button className="btn bg-primary text-white rounded-none">
                         How it works <FaRegQuestionCircle className="text-xl" />
                     </button>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
-                    <div className="border-2 border-[#E9E9E9] p-4 rounded-xl">
+                    <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
                                 <g clipPath="url(#clip0_6108_642)">
@@ -31,7 +31,7 @@ const About = () => {
                         <p className="text-[#717171]">Get ready to launch your real
                             estate website without...</p>
                     </div>
-                    <div className="border-2 border-[#E9E9E9] p-4 rounded-xl">
+                    <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
                                 <g clipPath="url(#clip0_6108_648)">
@@ -49,7 +49,7 @@ const About = () => {
                         <p className="text-[#717171]">Get ready to launch your real
                             estate website without...</p>
                     </div>
-                    <div className="border-2 border-[#E9E9E9] p-4 rounded-xl">
+                    <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
                                 <g clipPath="url(#clip0_6108_655)">
@@ -67,7 +67,7 @@ const About = () => {
                         <p className="text-[#717171]">Get ready to launch your real
                             estate website without...</p>
                     </div>
-                    <div className="border-2 border-[#E9E9E9] p-4 rounded-xl">
+                    <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
                                 <g clipPath="url(#clip0_6108_661)">

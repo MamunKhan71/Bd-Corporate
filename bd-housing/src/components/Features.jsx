@@ -2,11 +2,11 @@ import { TbArrowUpRight } from "react-icons/tb";
 const Features = () => {
     return (
         <div className="my-12 container mx-auto">
-            <h1 className="text-primary font-bold text-center text-3xl">See how Realtor can help</h1>
+            <h1 className="text-primary font-bold text-center text-3xl">See how BDCorporate can help</h1>
             <p className="text-gray-500 font-medium text-center">Aliquam lacinia diam quis lacus euismod</p>
-            <div className="grid grid-cols-3 gap-12 py-12">
-                <div className="card text-neutral-content">
-                    <div className="card-body items-center text-center text-primary">
+            <div className="grid grid-cols-3 gap-12 py-24">
+                <div className="card text-neutral-content rounded-none">
+                    <div className="card-body items-center text-center text-primary space-y-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none">
                             <path d="M27.6561 44.8455H17.3227C16.7903 44.8455 16.3584 45.2774 16.3584 45.8097V56.3227C16.3584 56.8551 16.7903 57.287 17.3227 57.287C17.855 57.287 18.287 56.8551 18.287 56.3227V46.774H27.6561C28.1885 46.774 28.6204 46.3421 28.6204 45.8097C28.6204 45.2774 28.1885 44.8455 27.6561 44.8455Z" fill="#EB6753" />
                             <path d="M17.3227 59.4077C16.7903 59.4077 16.3584 59.8396 16.3584 60.372V61.6792C16.3584 62.2114 16.7903 62.6434 17.3227 62.6434C17.855 62.6434 18.287 62.2114 18.287 61.6792V60.372C18.287 59.8396 17.855 59.4077 17.3227 59.4077Z" fill="#EB6753" />
@@ -44,13 +44,13 @@ const Features = () => {
                         <h2 className="card-title">Buy a property</h2>
                         <p>Nullam sollicitudin blandit eros eu pretium.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn border-2 border-primary bg-transparent text-lg">Find a office <TbArrowUpRight /></button>
+                            <button className="btn border-2 border-primary bg-transparent text-lg rounded-none">Find a office <TbArrowUpRight /></button>
                         </div>
                     </div>
                 </div>
 
-                <div className="card text-neutral-content shadow-xl">
-                    <div className="card-body items-center text-center text-primary">
+                <div className="card text-neutral-content shadow-xl border-2 rounded-none ">
+                    <div className="card-body items-center text-center text-primary space-y-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none">
                             <path d="M6.72063 58.3629C7.25301 58.3629 7.68495 57.931 7.68495 57.3986V56.9679C7.68495 56.4355 7.25301 56.0037 6.72063 56.0037C6.18827 56.0037 5.75635 56.4355 5.75635 56.9679V57.3986C5.75635 57.931 6.18827 58.3629 6.72063 58.3629Z" fill="#EB6753" />
                             <path d="M5.75635 74.717C5.75635 75.2492 6.18827 75.6812 6.72063 75.6812C7.25301 75.6812 7.68495 75.2492 7.68495 74.717V60.7472C7.68495 60.2149 7.25301 59.783 6.72063 59.783C6.18827 59.783 5.75635 60.2149 5.75635 60.7472V74.717Z" fill="#EB6753" />
@@ -87,12 +87,12 @@ const Features = () => {
                         <h2 className="card-title">Sell a property</h2>
                         <p>Nullam sollicitudin blandit eros eu pretium.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn border-2 border-primary bg-primary text-white text-lg">Place an ad <TbArrowUpRight /></button>
+                            <button className="btn border-2 border-primary bg-primary text-white text-lg rounded-none">Place an ad <TbArrowUpRight /></button>
                         </div>
                     </div>
                 </div>
-                <div className="card text-neutral-content">
-                    <div className="card-body items-center text-center text-primary">
+                <div className="card text-neutral-content rounded-none">
+                    <div className="card-body items-center text-center text-primary space-y-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none">
                             <path d="M35.393 44.7388H21.6708C21.1385 44.7388 20.7065 45.1707 20.7065 45.7031V60.8944C20.7065 61.4266 21.1385 61.8586 21.6708 61.8586C22.2032 61.8586 22.6351 61.4266 22.6351 60.8944V46.6674H35.393C35.9254 46.6674 36.3574 46.2355 36.3574 45.7031C36.3574 45.1707 35.9254 44.7388 35.393 44.7388Z" fill="#EB6753" />
                             <path d="M21.6708 63.5498C21.1385 63.5498 20.7065 63.9818 20.7065 64.514V66.0458C20.7065 66.578 21.1385 67.01 21.6708 67.01C22.2032 67.01 22.6351 66.578 22.6351 66.0458V64.514C22.6351 63.9818 22.2032 63.5498 21.6708 63.5498Z" fill="#EB6753" />
@@ -127,7 +127,7 @@ const Features = () => {
                         <h2 className="card-title">Rent a property</h2>
                         <p>Nullam sollicitudin blandit eros eu pretium.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn border-2 border-primary bg-transparent text-lg">Find a rental <TbArrowUpRight /></button>
+                            <button className="btn border-2 border-primary bg-transparent text-lg rounded-none">Find a rental <TbArrowUpRight /></button>
                         </div>
                     </div>
                 </div>

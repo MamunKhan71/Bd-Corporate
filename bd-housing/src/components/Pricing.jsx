@@ -9,7 +9,7 @@ const Pricing = () => {
                     </div>
                     <div className="flex flex-wrap items-stretch">
                         <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-                            <div className="flex flex-grow flex-col p-6 space-y-6 rounded-xl sm:p-8 border-2 border-[#eb675314] ">
+                            <div className="flex flex-grow flex-col p-6 space-y-6 rounded-none sm:p-8 border-2 border-[#eb675314] ">
                                 <div className="space-y-2">
                                     <h4 className="text-2xl font-bold">Basic</h4>
                                     <span className="text-6xl font-bold">Free</span>
@@ -48,11 +48,11 @@ const Pricing = () => {
                                         <span>24/7 Full support</span>
                                     </li>
                                 </ul>
-                                <button type="button" className="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded bg-primary text-white">Get Started</button>
+                                <button type="button" className="inline-block px-5 py-3 font-semibold tracking-wider text-center bg-primary text-white">Get Started</button>
                             </div>
                         </div>
                         <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0  ">
-                            <div className="flex flex-grow flex-col p-6 space-y-6 rounded-xl bg-[#eb675314] sm:p-8  text-gray-900">
+                            <div className="flex flex-grow flex-col p-6 space-y-6 rounded-none bg-[#eb675314] sm:p-8  text-gray-900">
                                 <div className="space-y-2">
                                     <h4 className="text-2xl font-bold">Business</h4>
                                     <span className="text-6xl font-bold">$999.00
@@ -93,11 +93,11 @@ const Pricing = () => {
                                     </li>
 
                                 </ul>
-                                <a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded bg-gray-800 text-white">Get Started</a>
+                                <a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center bg-gray-800 text-white">Get Started</a>
                             </div>
                         </div>
                         <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-                            <div className="flex flex-grow flex-col p-6 space-y-6 rounded-xl sm:p-8 bg-white border-2 border-[#eb675314] ">
+                            <div className="flex flex-grow flex-col p-6 space-y-6 rounded-none sm:p-8 bg-white border-2 border-[#eb675314] ">
                                 <div className="space-y-2">
                                     <h4 className="text-2xl font-bold">Professional</h4>
                                     <span className="text-6xl font-bold">$599.00
@@ -137,7 +137,7 @@ const Pricing = () => {
                                         <span>24/7 Full support</span>
                                     </li>
                                 </ul>
-                                <a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded bg-primary text-white">Get Started</a>
+                                <a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center bg-primary text-white">Get Started</a>
                             </div>
                         </div>
                     </div>

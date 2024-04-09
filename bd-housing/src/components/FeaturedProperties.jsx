@@ -6,11 +6,11 @@ const FeaturedProperties = () => {
             <h1 className="text-center font-bold text-3xl">Our Featured Properties</h1>
             <p className="text-center">Aliquam lacinia diam quis lacus euismod</p>
             <div className="flex gap-4 justify-end items-center">
-                <button className="bg-primary btn text-white">For Sale</button>
-                <button className="border-primary btn border-2 text-primary bg-transparent">For Rent</button>
+                <button className="bg-primary btn text-white rounded-none">For Sale</button>
+                <button className="border-primary btn border-2 text-primary bg-transparent rounded-none">For Rent</button>
             </div>
             <div className="grid grid-cols-4 gap-6 py-12">
-                <div className="card card-compact bg-base-100 shadow-xl">
+                <div className="card card-compact bg-base-100 shadow-xl rounded-none">
                     <figure><img className="h-72 object-cover" src="images/header3.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Luxury Family Home</h2>
@@ -30,11 +30,11 @@ const FeaturedProperties = () => {
                             </div>
                         </div>
                         <div className="card-actions justify-end">
-                            <button className="btn bg-primary text-white">$ 5,500</button>
+                            <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact bg-base-100 shadow-xl">
+                <div className="card card-compact bg-base-100 shadow-xl rounded-none">
                     <figure><img className="h-72 object-cover" src="images/header2.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Luxury Family Home</h2>
@@ -54,11 +54,11 @@ const FeaturedProperties = () => {
                             </div>
                         </div>
                         <div className="card-actions justify-end">
-                            <button className="btn bg-primary text-white">$ 5,500</button>
+                            <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact bg-base-100 shadow-xl">
+                <div className="card card-compact bg-base-100 shadow-xl rounded-none">
                     <figure><img className="h-72 object-cover" src="images/header.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Luxury Family Home</h2>
@@ -78,11 +78,11 @@ const FeaturedProperties = () => {
                             </div>
                         </div>
                         <div className="card-actions justify-end">
-                            <button className="btn bg-primary text-white">$ 5,500</button>
+                            <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact bg-base-100 shadow-xl">
+                <div className="card card-compact bg-base-100 shadow-xl rounded-none">
                     <figure><img className="h-72 object-cover" src="images/header3.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Luxury Family Home</h2>
@@ -102,13 +102,13 @@ const FeaturedProperties = () => {
                             </div>
                         </div>
                         <div className="card-actions justify-end">
-                            <button className="btn bg-primary text-white">$ 5,500</button>
+                            <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="flex gap-2 items-center justify-center">
-                <div className="flex items-center justify-center gap-2 bg-primary text-white rounded-xl btn">
+                <div className="flex items-center justify-center gap-2 bg-primary text-white rounded-none btn">
                     <p>Learn More</p>
                     <TbArrowUpRight />
                 </div>
