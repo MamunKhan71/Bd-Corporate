@@ -49,7 +49,7 @@ const Features = () => {
                     </div>
                 </div>
 
-                <div className="card text-neutral-content shadow-xl border-2 rounded-none ">
+                <div className="card text-neutral-content shadow-xl border-2 rounded-none">
                     <div className="card-body items-center text-center text-primary space-y-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none">
                             <path d="M6.72063 58.3629C7.25301 58.3629 7.68495 57.931 7.68495 57.3986V56.9679C7.68495 56.4355 7.25301 56.0037 6.72063 56.0037C6.18827 56.0037 5.75635 56.4355 5.75635 56.9679V57.3986C5.75635 57.931 6.18827 58.3629 6.72063 58.3629Z" fill="#EB6753" />

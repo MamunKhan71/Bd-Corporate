@@ -4,7 +4,7 @@ const ContactUs = () => {
             <>
                 <>
                     {/* Container for demo purpose */}
-                    <div className="container my-24 mx-auto md:px-6">
+                    <div className="container my-24 mx-auto md:px-6 animate__animated animate__fadeIn">
                         {/* Section: Design Block */}
                         <section className="mb-32">
                             <div className="flex justify-center">

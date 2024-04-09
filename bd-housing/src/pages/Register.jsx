@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { AuthContext } from "../provider/AuthProvider";
@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
     const { createNewUser, googleSignUp, gitHubSignIn } = useContext(AuthContext)
+    const [logStatus, setLogStatus] = useState('')
 
     const {
         register,
@@ -19,7 +20,7 @@ const Register = () => {
         const password = data.password
         createNewUser(email, password)
             .then(() => {
-                toast.success('User Created Successfully!', {
+                setLogStatus('User Created Successfully!', {
                     style: { background: '#181A20', color: 'white' }
                 })
             })
@@ -27,20 +28,21 @@ const Register = () => {
                 style: { background: '#181A20', color: 'white' }
             }))
     }
-    
+
     const handleGoogleSignUp = () => {
         googleSignUp()
-            .then(()=> toast.success("Login Successful!"))
-            .catch(()=> toast.error("Something Went Wrong!"))
+            .then(() => setLogStatus("Sign up Successful!"))
+            .catch(() => toast.error("Something Went Wrong!"))
     }
 
     return (
-        <div className="w-full lg:w-96 mx-auto">
+        <div className="w-full lg:w-96 mx-auto animate__animated animate__fadeIn">
             <div className="flex items-center justify-center h-auto lg:h-[calc(100dvh-90px)] ">
                 <div className="flex flex-col items-center font-poppins w-full lg:pb-12">
                     <div className="space-y-7 flex items-center flex-col w-full">
                         <h1 className="text-primary text-3xl font-semibold">Sign up</h1>
                         <p className="text-primary text-center text-sm">Sign up to access your account</p>
+                        <p className="font-bold text-center animate__animated animate__flipInX">{logStatus}</p>
                         <div className="flex gap-5 w-full">
                             <button onClick={gitHubSignIn} className="btn flex-1 rounded-none">
                                 <img className="h-6 w-6" src="/images/github-mark.svg" alt="" />
