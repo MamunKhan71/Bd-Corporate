@@ -6,6 +6,7 @@ import FeaturedProperties from "../components/FeaturedProperties";
 import FeaturedSection from "../components/FeaturedSection";
 import Features from "../components/Features";
 import Hero from "../components/Hero";
+import Pricing from "../components/Pricing";
 import Testimonial from "../components/Testimonial";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <About/>
             <Cities/>
             <Features />
+            <Pricing/>
             <FeaturedSection />
             <FeaturedProperties/>
             <Testimonial />

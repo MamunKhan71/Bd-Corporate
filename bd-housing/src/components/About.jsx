@@ -44,8 +44,8 @@ const About = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <h1 className="text-[#EB6753] text-2xl font-bold">01</h1>
-                        <p className="font-bold text-xl text-primary">Search Your Dream Home</p>
+                        <h1 className="text-[#EB6753] text-2xl font-bold">02</h1>
+                        <p className="font-bold text-xl text-primary">Choose The House You Like</p>
                         <p className="text-[#717171]">Get ready to launch your real
                             estate website without...</p>
                     </div>
@@ -62,8 +62,8 @@ const About = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <h1 className="text-[#EB6753] text-2xl font-bold">01</h1>
-                        <p className="font-bold text-xl text-primary">Search Your Dream Home</p>
+                        <h1 className="text-[#EB6753] text-2xl font-bold">03</h1>
+                        <p className="font-bold text-xl text-primary">Enquire About This Property</p>
                         <p className="text-[#717171]">Get ready to launch your real
                             estate website without...</p>
                     </div>
@@ -80,8 +80,8 @@ const About = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <h1 className="text-[#EB6753] text-2xl font-bold">01</h1>
-                        <p className="font-bold text-xl text-primary">Search Your Dream Home</p>
+                        <h1 className="text-[#EB6753] text-2xl font-bold">04</h1>
+                        <p className="font-bold text-xl text-primary">Own Your Home</p>
                         <p className="text-[#717171]">Get ready to launch your real
                             estate website without...</p>
                     </div>
