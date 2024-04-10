@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+html{
+    scroll-behavior: smooth;
+}
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -10,15 +13,15 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #1B242F; 
+    background: #04C2C9; 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #04C2C9; 
+    background: #181A20; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover{
-    background: #04C2; 
+    background: #04C2C9; 
 }

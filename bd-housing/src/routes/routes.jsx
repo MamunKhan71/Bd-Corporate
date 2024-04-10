@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
 import ContactUs from "../pages/ContactUs";
 import PropertyList from "../pages/PropertyList";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: '/properties',
                 element: <PropertyList/>
+            },
+            {
+                path: '/about',
+                element: <About/>
             }
         ]
     },
