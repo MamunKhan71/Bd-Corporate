@@ -3,6 +3,8 @@ import { CiSearch } from "react-icons/ci";
 import { TbArrowUpRight } from "react-icons/tb";
 import { ContentContext } from "../provider/ContextProvider";
 import { ScrollRestoration } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
+import { MdOutlineVerticalAlignTop } from "react-icons/md";
 const PropertyList = () => {
     const [value, setValue] = useState(25)
     const { propertyData } = useContext(ContentContext)
@@ -116,7 +118,12 @@ const PropertyList = () => {
                     </div>
                 </div>
             </div>
-            <ScrollRestoration/>
+            <ScrollRestoration />
+            <ScrollToTop
+                smooth
+                viewBox="0 0 28 28"
+                component={<MdOutlineVerticalAlignTop className="text-4xl text-white bg-primary h-12 w-12" />}
+            />
         </div>
     );
 };
