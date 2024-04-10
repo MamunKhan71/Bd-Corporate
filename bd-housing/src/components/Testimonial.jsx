@@ -24,7 +24,7 @@ export default function Testimonial() {
                     {
                         testimonial.map(test => <>
                             <SwiperSlide>
-                                <div className='text-white bg-primary h-[50dvh] flex items-center justify-center flex-col space-y-4'>
+                                <div className='text-white bg-primary h-[60dvh] flex items-center justify-center flex-col space-y-4'>
                                     <h1 className='text-center font-bold text-2xl'>Testimonial</h1>
                                     <FaQuoteLeft className='text-3xl text-gray-400' />
                                     <p className='w-[780px] text-center text-xl'>{test.description}</p>

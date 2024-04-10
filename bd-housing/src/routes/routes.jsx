@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
 import ContactUs from "../pages/ContactUs";
+import PropertyList from "../pages/PropertyList";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <ContactUs/>
+            },
+            {
+                path: '/properties',
+                element: <PropertyList/>
             }
         ]
     },

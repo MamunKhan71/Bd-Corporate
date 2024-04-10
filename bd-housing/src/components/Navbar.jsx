@@ -11,11 +11,11 @@ const Navbar = () => {
                 }
             >Home</NavLink>
             <NavLink
-                to="/b"
+                to="/properties"
                 className={({ isActive }) =>
                     isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
                 }
-            >Listings</NavLink>
+            >Properties</NavLink>
             <NavLink
                 to="/a"
                 className={({ isActive }) =>
