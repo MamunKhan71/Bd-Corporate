@@ -3,13 +3,18 @@ import { createContext, useEffect, useState } from "react";
 export const ContentContext = createContext()
 const ContextProvider = ({children}) => {
     const [testimonial, setTestimonial] = useState([])
+    const [propertyData, setRealData] = useState([])
+    useEffect(()=>{
+        axios.get('real-estate.json')
+            .then(res => setRealData(res.data.properties))
+    },[])
     useEffect(()=>{
         axios.get('testimonial.json')
             .then(res => setTestimonial(res.data.testimonials))
             .catch(error => console.log(error))
     },[])
     console.log(testimonial)
-    const contents = {testimonial}
+    const contents = {testimonial, propertyData}
     return (
         <div>
             <ContentContext.Provider value={contents}>

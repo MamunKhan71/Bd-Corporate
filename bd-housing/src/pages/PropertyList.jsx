@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { TbArrowUpRight } from "react-icons/tb";
+import { ContentContext } from "../provider/ContextProvider";
 
 const PropertyList = () => {
     const [value, setValue] = useState(25)
+    const { propertyData } = useContext(ContentContext)
 
     const handleChange = (e) => {
         console.log(e.target.value)
@@ -76,102 +78,34 @@ const PropertyList = () => {
                             </div>
                         </div>
                         <div className="col-span-3 grid grid-cols-3 gap-6">
-                            <div className="card card-compact bg-base-100 shadow-xl rounded-none">
-                                <figure><img className="h-72 object-cover" src="images/header3.jpg" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Luxury Family Home</h2>
-                                    <p>132 Greene Ave</p>
-                                    <div className="flex gap-6 items-center">
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="20" src="https://img.icons8.com/ios/50/length.png" alt="length" />
+                            {
+                                propertyData.map(data => <>
+                                    <div className="card card-compact bg-base-100 shadow-xl rounded-none">
+                                        <figure><img className="h-72 w-full object-cover" src={data.image} alt="Shoes" /></figure>
+                                        <div className="card-body">
+                                            <h2 className="card-title">{data.estate_title}</h2>
+                                            <p>132 Greene Ave</p>
+                                            <div className="flex gap-6 items-center">
+                                                <div className="flex gap-2 items-center">
+                                                    <div className="w-12 h-12 flex items-center justify-center">
+                                                        <img width="20" height="20" src="https://img.icons8.com/ios/50/length.png" alt="length" />
+                                                    </div>
+                                                    <p className="font-semibold text-primary">{data.area}</p>
+                                                </div>
+                                                <div className="flex gap-2 items-center">
+                                                    <div className="w-12 h-12 flex items-center justify-center">
+                                                        <img width="20" height="204" src="https://img.icons8.com/material-two-tone/24/spinner-frame-5.png" alt="spinner-frame-5" />
+                                                    </div>
+                                                    <p className="font-semibold text-primary">{data.status}</p>
+                                                </div>
                                             </div>
-                                            <p className="font-semibold text-primary">9 Beds</p>
-                                        </div>
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="204" src="https://img.icons8.com/material-two-tone/24/spinner-frame-5.png" alt="spinner-frame-5" />
+                                            <div className="card-actions justify-end">
+                                                <button className="btn bg-primary text-white rounded-none">$ {data.price.split('/')[0]}</button>
                                             </div>
-                                            <p className="font-semibold text-primary">Sale</p>
-                                        </div>
-                                    </div>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card card-compact bg-base-100 shadow-xl rounded-none">
-                                <figure><img className="h-72 object-cover" src="images/header2.jpg" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Luxury Family Home</h2>
-                                    <p>132 Greene Ave</p>
-                                    <div className="flex gap-6 items-center">
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="20" src="https://img.icons8.com/ios/50/length.png" alt="length" />
-                                            </div>
-                                            <p className="font-semibold text-primary">9 Beds</p>
-                                        </div>
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="204" src="https://img.icons8.com/material-two-tone/24/spinner-frame-5.png" alt="spinner-frame-5" />
-                                            </div>
-                                            <p className="font-semibold text-primary">Sale</p>
                                         </div>
                                     </div>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card card-compact bg-base-100 shadow-xl rounded-none">
-                                <figure><img className="h-72 object-cover" src="images/header.jpg" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Luxury Family Home</h2>
-                                    <p>132 Greene Ave</p>
-                                    <div className="flex gap-6 items-center">
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="20" src="https://img.icons8.com/ios/50/length.png" alt="length" />
-                                            </div>
-                                            <p className="font-semibold text-primary">9 Beds</p>
-                                        </div>
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="204" src="https://img.icons8.com/material-two-tone/24/spinner-frame-5.png" alt="spinner-frame-5" />
-                                            </div>
-                                            <p className="font-semibold text-primary">Sale</p>
-                                        </div>
-                                    </div>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card card-compact bg-base-100 shadow-xl rounded-none">
-                                <figure><img className="h-72 object-cover" src="images/header3.jpg" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Luxury Family Home</h2>
-                                    <p>132 Greene Ave</p>
-                                    <div className="flex gap-6 items-center">
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="20" src="https://img.icons8.com/ios/50/length.png" alt="length" />
-                                            </div>
-                                            <p className="font-semibold text-primary">9 Beds</p>
-                                        </div>
-                                        <div className="flex gap-2 items-center">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img width="20" height="204" src="https://img.icons8.com/material-two-tone/24/spinner-frame-5.png" alt="spinner-frame-5" />
-                                            </div>
-                                            <p className="font-semibold text-primary">Sale</p>
-                                        </div>
-                                    </div>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
-                                    </div>
-                                </div>
-                            </div>
+                                </>)
+                            }
                         </div>
                     </div>
                     <div className="flex gap-2 items-center justify-center">
