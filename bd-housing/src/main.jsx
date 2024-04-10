@@ -10,10 +10,10 @@ import ContextProvider from "./provider/ContextProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <ContextProvider>
-        <RouterProvider router={router} />
-      </ContextProvider>
-    </AuthProvider>
+      <AuthProvider>
+        <ContextProvider>
+          <RouterProvider router={router} />
+        </ContextProvider>
+      </AuthProvider>
   </React.StrictMode>
 ); 

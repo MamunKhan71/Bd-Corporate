@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { TbArrowUpRight } from "react-icons/tb";
 import { ContentContext } from "../provider/ContextProvider";
-
+import { ScrollRestoration } from "react-router-dom";
 const PropertyList = () => {
     const [value, setValue] = useState(25)
     const { propertyData } = useContext(ContentContext)
@@ -12,7 +12,7 @@ const PropertyList = () => {
         setValue(e.target.value)
     }
     return (
-        <div className="w-full container mx-auto mt-12">
+        <div className="w-full container mx-auto mt-12 animate__animated animate__fadeIn">
             <div className="h-[600px] px-96 space-y-4 flex flex-col items-center justify-center w-full bg-[url(/images/banner.jpeg)] bg-cover rounded-2xl">
                 <h1 className="text-5xl leading-[70px] text-center font-bold ">Easy Way to Find a Perfect Property</h1>
                 <p>From as low as $10 per day with limited time offer discounts.</p>
@@ -116,6 +116,7 @@ const PropertyList = () => {
                     </div>
                 </div>
             </div>
+            <ScrollRestoration/>
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import { TbArrowUpRight } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const FeaturedProperties = () => {
     return (
@@ -108,10 +109,10 @@ const FeaturedProperties = () => {
                 </div>
             </div>
             <div className="flex gap-2 items-center justify-center">
-                <div className="flex items-center justify-center gap-2 bg-primary text-white rounded-none btn">
+                <Link to="/properties" className="flex items-center justify-center gap-2 bg-primary text-white rounded-none btn">
                     <p>Learn More</p>
                     <TbArrowUpRight />
-                </div>
+                </Link>
             </div>
         </div>
     );
