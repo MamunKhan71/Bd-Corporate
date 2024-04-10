@@ -97,7 +97,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-primary text-white text-lg w-52">
-                                    <li><a>Profile</a></li>
+                                    <li><Link to="/profile">Profile</Link></li>
                                     <li><button className="" onClick={() => document.getElementById('my_modal_1').showModal()}>Logout</button></li>
                                     <dialog id="my_modal_1" className="modal">
                                         <div className="modal-box w-auto rounded-none">

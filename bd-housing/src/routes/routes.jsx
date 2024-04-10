@@ -9,6 +9,7 @@ import NotFound from "../pages/NotFound";
 import ContactUs from "../pages/ContactUs";
 import PropertyList from "../pages/PropertyList";
 import About from "../pages/About";
+import Profile from "../pages/Profile";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About/>
+            },
+            {
+                path: '/profile',
+                element: <Profile/>
             }
         ]
     },
