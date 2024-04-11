@@ -1,6 +1,8 @@
 import { TbArrowUpRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
+
+
 const FeaturedProperties = () => {
     return (
         <div className="mt-24 container mx-auto space-y-4">

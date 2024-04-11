@@ -2,34 +2,55 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { AuthContext } from "../provider/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { toast } from 'react-toastify';
 const Register = () => {
-    const { createNewUser, googleSignUp, gitHubSignIn } = useContext(AuthContext)
+    const { createNewUser, googleSignUp, gitHubSignIn, updateUserProfile } = useContext(AuthContext)
     const [logStatus, setLogStatus] = useState('')
-
+    const [passInfo, setPassInfo] = useState(null)
+    const [passStatus, setPassStatus] = useState(false)
+    const [focus, setTheFocus] = useState(false)
     const {
         register,
         handleSubmit,
+        setFocus,
         formState: { errors },
     } = useForm();
 
+    const checkPass = (password) => {
+        if (/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+            setPassInfo("Valid Password");
+            return true;
+        } else {
+            setPassInfo("Invalid Password");
+        }
+    }
 
     const handleCreateUser = (data) => {
         const email = data.email
         const password = data.password
-        createNewUser(email, password)
-            .then(() => {
-                setLogStatus('User Created Successfully!', {
-                    style: { background: '#181A20', color: 'white' }
+        if (checkPass(password)) {
+            const photoUrl = data.photoUrl ? data.photoUrl : ''
+            const name = data.name ? data.name : ''
+            createNewUser(email, password)
+                .then(() => {
+                    updateUserProfile(name, photoUrl)
+                        .then(() => setLogStatus('User Created Successfully!', {
+                            style: { background: '#181A20', color: 'white' }
+                        }))
                 })
-            })
-            .catch(() => toast.error('Something went wrong', {
-                style: { background: '#181A20', color: 'white' }
-            }))
+                .catch(() => toast.error("Email Already Exists", {
+                    style: { background: '#181A20', color: 'white' }
+                }))
+        } else {
+            setPassInfo("Invalid Password")
+            setFocus("password")
+        }
+
     }
 
     const handleGoogleSignUp = () => {
+
         googleSignUp()
             .then(() => setLogStatus("Sign up Successful!"))
             .catch(() => toast.error("Something Went Wrong!"))
@@ -77,12 +98,15 @@ const Register = () => {
                                     <input {...register('photoUrl')} type="text" placeholder="Your photo url here" className="input bg-[#F5F9FE] w-full p-7 rounded-none" />
                                 </div>
                                 <div className="w-full space-y-2">
-                                    <label className="input flex items-center gap-2 bg-[#F5F9FE] p-7 rounded-none">
-                                        <input {...register('password')} type="password" className="grow w-full" placeholder="••••••••" />
-                                        <svg className="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M15.725 13.525L14.625 12.425C15.0583 11.2417 14.8333 10.2583 13.95 9.475C13.0667 8.69167 12.1083 8.49167 11.075 8.875L9.975 7.775C10.2583 7.59167 10.575 7.45833 10.925 7.375C11.275 7.29167 11.6333 7.25 12 7.25C13.1833 7.25 14.1875 7.6625 15.0125 8.4875C15.8375 9.3125 16.25 10.3167 16.25 11.5C16.25 11.8667 16.2042 12.2292 16.1125 12.5875C16.0208 12.9458 15.8917 13.2583 15.725 13.525ZM18.95 16.75L17.95 15.75C18.7667 15.15 19.4792 14.4792 20.0875 13.7375C20.6958 12.9958 21.1417 12.25 21.425 11.5C20.5917 9.65 19.3417 8.1875 17.675 7.1125C16.0083 6.0375 14.2 5.5 12.25 5.5C11.55 5.5 10.8333 5.56667 10.1 5.7C9.36667 5.83333 8.79167 5.99167 8.375 6.175L7.225 5C7.80833 4.73333 8.55417 4.5 9.4625 4.3C10.3708 4.1 11.2583 4 12.125 4C14.5083 4 16.6875 4.67917 18.6625 6.0375C20.6375 7.39583 22.0833 9.21667 23 11.5C22.5667 12.5667 22.0083 13.5417 21.325 14.425C20.6417 15.3083 19.85 16.0833 18.95 16.75ZM20.4 22.4L16.2 18.275C15.6167 18.5083 14.9583 18.6875 14.225 18.8125C13.4917 18.9375 12.75 19 12 19C9.56667 19 7.35833 18.3208 5.375 16.9625C3.39167 15.6042 1.93333 13.7833 1 11.5C1.33333 10.6333 1.79583 9.7875 2.3875 8.9625C2.97917 8.1375 3.7 7.35 4.55 6.6L1.4 3.45L2.45 2.375L21.375 21.3L20.4 22.4ZM5.575 7.65C4.95833 8.1 4.3625 8.69167 3.7875 9.425C3.2125 10.1583 2.8 10.85 2.55 11.5C3.4 13.35 4.67917 14.8125 6.3875 15.8875C8.09583 16.9625 10.0333 17.5 12.2 17.5C12.75 17.5 13.2917 17.4667 13.825 17.4C14.3583 17.3333 14.7583 17.2333 15.025 17.1L13.425 15.5C13.2417 15.5833 13.0167 15.6458 12.75 15.6875C12.4833 15.7292 12.2333 15.75 12 15.75C10.8333 15.75 9.83333 15.3417 9 14.525C8.16667 13.7083 7.75 12.7 7.75 11.5C7.75 11.25 7.77083 11 7.8125 10.75C7.85417 10.5 7.91667 10.275 8 10.075L5.575 7.65Z" fill="#3B4054" />
-                                        </svg>
+                                    <label className={`input flex items-center gap-2 bg-[#F5F9FE] p-7 rounded-none ${focus? "animate__animated animate__shakeX": ""}`}>
+                                        <input onFocus={() => setTheFocus(!focus)} onKeyUp={(e) => checkPass(e.target.value)} {...register('password')} type={passStatus ? "text" : "password"} className={`grow w-full`} placeholder="••••••••" />
+                                        {
+
+                                            passStatus ? <FaRegEye className="text-2xl hover:cursor-pointer animate__animated animate__fadeIn" onClick={() => setPassStatus(!passStatus)} /> : <FaRegEyeSlash className="text-2xl hover:cursor-pointer" onClick={() => setPassStatus(!passStatus)} />
+
+                                        }
                                     </label>
+                                    {passInfo && <span className={`font-semibold text-sm flex justify-end animate__animated animate__headShake ${passInfo === 'Valid' ? "text-green-600" : "text-[#EB6753]"}`}>{passInfo}</span>}
                                 </div>
                             </div>
                             <div className="w-full">
@@ -96,18 +120,6 @@ const Register = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer
-                position="bottom-center"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-                transition:Slide />
         </div>
     );
 };

@@ -11,9 +11,8 @@ import Testimonial from "../components/Testimonial";
 import ScrollToTop from "react-scroll-to-top";
 import { MdOutlineVerticalAlignTop } from "react-icons/md";
 const Home = () => {
-    const scroll = () => {
-        document.ScrollToTop()
-    }
+
+
     return (
         <div>
             <div className="h-[80dvh]">
@@ -32,7 +31,7 @@ const Home = () => {
                 <ScrollToTop
                     smooth
                     viewBox="0 0 28 28"
-                    component={<MdOutlineVerticalAlignTop className="text-4xl text-white bg-primary h-12 w-12"/>}
+                    component={<MdOutlineVerticalAlignTop className="text-4xl text-white bg-primary h-12 w-12" />}
                 />
             </div>
 

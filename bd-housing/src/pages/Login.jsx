@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import { AuthContext } from "../provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import 'animate.css';
 const Login = () => {
+    const navigate = useNavigate()
     const [passStatus, setPassStatus] = useState(false)
     const [logStatus, setLogStatus] = useState('')
     const {
@@ -18,9 +18,11 @@ const Login = () => {
         const email = data.email
         const password = data.password
         signInEmail(email, password)
-            .then(() => (setLogStatus("Login Successful!"))
-            )
-            .catch(() => toast.error("Password wrong!", {
+            .then(() => {
+                setLogStatus("Login Successful!")
+                navigate('/')
+            })
+            .catch(() => toast.error("Wrong password!", {
                 style: { background: '#181A20', color: 'white' }
             }))
     }
@@ -74,7 +76,7 @@ const Login = () => {
                                 </div>
                                 <div className="w-full space-y-2">
                                     <label className="input flex items-center gap-2 bg-[#F5F9FE] p-7 rounded-none">
-                                        <input {...register('password')} type={passStatus?"text":"password"} className="grow w-full" placeholder="••••••••" />
+                                        <input {...register('password')} type={passStatus ? "text" : "password"} className="grow w-full" placeholder="••••••••" />
                                         {
                                             passStatus ? <FaRegEye className="text-2xl hover:cursor-pointer animate__animated animate__fadeIn" onClick={() => setPassStatus(!passStatus)} /> : <FaRegEyeSlash className="text-2xl hover:cursor-pointer" onClick={() => setPassStatus(!passStatus)} />
                                         }
@@ -95,18 +97,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer
-                position="bottom-center"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-                transition:Slide />
         </div>
     );
 };

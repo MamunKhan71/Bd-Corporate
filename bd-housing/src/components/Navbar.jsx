@@ -91,9 +91,9 @@ const Navbar = () => {
                             }
                         </> : <>
                             <div className="dropdown dropdown-end">
-                                <div tabIndex={0} role="button" className="avatar">
+                                <div data-tip={user.displayName}  tabIndex={0} role="button" className="avatar tooltip tooltip-bottom">
                                     <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                        <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                        <img src={user.photoURL} />
                                     </div>
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-primary text-white text-lg w-52">
