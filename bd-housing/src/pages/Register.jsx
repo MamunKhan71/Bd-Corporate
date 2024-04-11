@@ -1,19 +1,21 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { AuthContext } from "../provider/AuthProvider";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
 const Register = () => {
-    const { createNewUser, googleSignUp, gitHubSignIn, updateUserProfile } = useContext(AuthContext)
+    const { createNewUser, googleSignUp, gitHubSignIn, updateUserProfile, logout, user } = useContext(AuthContext)
     const [logStatus, setLogStatus] = useState('')
+    const [loading, setLoading] = useState(true)
     const [passInfo, setPassInfo] = useState(null)
     const [passStatus, setPassStatus] = useState(false)
     const [focus, setTheFocus] = useState(false)
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
-        setFocus,
+        resetField,
         formState: { errors },
     } = useForm();
 
@@ -38,23 +40,39 @@ const Register = () => {
                         .then(() => setLogStatus('User Created Successfully!', {
                             style: { background: '#181A20', color: 'white' }
                         }))
+                        .then(logout())
+                        .then(toast.info("Account Created, Please Login!"))
+                        .then(navigate('/login'))
                 })
+
                 .catch(() => toast.error("Email Already Exists", {
                     style: { background: '#181A20', color: 'white' }
                 }))
         } else {
             setPassInfo("Invalid Password")
-            setFocus("password")
+            resetField('password')
+            setTheFocus(true)
         }
 
     }
 
-    const handleGoogleSignUp = () => {
-
-        googleSignUp()
-            .then(() => setLogStatus("Sign up Successful!"))
-            .catch(() => toast.error("Something Went Wrong!"))
-    }
+    const handleGoogleSignUp = async () => {
+        try {
+            const res = await googleSignUp();
+            const photoUrl = res.photoURL;
+            const name = res.displayName;
+            await updateUserProfile(name, photoUrl);
+            setLogStatus('User Created Successfully!', {
+                style: { background: '#181A20', color: 'white' }
+            });
+            await logout();
+            toast.info("Account Created, Please Login!");
+            navigate('/login');
+        } catch (e) {
+            toast.error(e.message);
+        }
+    };
+    
 
     return (
         <div className="w-full lg:w-96 mx-auto animate__animated animate__fadeIn">
@@ -98,8 +116,8 @@ const Register = () => {
                                     <input {...register('photoUrl')} type="text" placeholder="Your photo url here" className="input bg-[#F5F9FE] w-full p-7 rounded-none" />
                                 </div>
                                 <div className="w-full space-y-2">
-                                    <label className={`input flex items-center gap-2 bg-[#F5F9FE] p-7 rounded-none ${focus? "animate__animated animate__shakeX": ""}`}>
-                                        <input onFocus={() => setTheFocus(!focus)} onKeyUp={(e) => checkPass(e.target.value)} {...register('password')} type={passStatus ? "text" : "password"} className={`grow w-full`} placeholder="••••••••" />
+                                    <label className={`input flex items-center gap-2 bg-[#F5F9FE] p-7 rounded-none ${focus ? "animate__animated animate__shakeX" : ""}`}>
+                                        <input onFocus={() => setTheFocus(false)} onKeyUp={(e) => checkPass(e.target.value)} {...register('password')} type={passStatus ? "text" : "password"} className={`grow w-full`} placeholder="••••••••" />
                                         {
 
                                             passStatus ? <FaRegEye className="text-2xl hover:cursor-pointer animate__animated animate__fadeIn" onClick={() => setPassStatus(!passStatus)} /> : <FaRegEyeSlash className="text-2xl hover:cursor-pointer" onClick={() => setPassStatus(!passStatus)} />
