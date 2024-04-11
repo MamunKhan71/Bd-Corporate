@@ -10,6 +10,7 @@ import ContactUs from "../pages/ContactUs";
 import PropertyList from "../pages/PropertyList";
 import About from "../pages/About";
 import Profile from "../pages/Profile";
+import PropertyDetails from "../pages/PropertyDetails";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <Profile/>
+            },
+            {
+                path: 'properties/:id',
+                element: <PropertyDetails/>
             }
         ]
     },

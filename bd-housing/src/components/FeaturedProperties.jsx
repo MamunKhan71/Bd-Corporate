@@ -32,6 +32,9 @@ const FeaturedProperties = () => {
                                 <p className="font-semibold text-primary">Sale</p>
                             </div>
                         </div>
+                        <div>
+                            <button>Commercial</button>
+                        </div>
                         <div className="card-actions justify-end">
                             <button className="btn bg-primary text-white rounded-none">$ 5,500</button>
                         </div>

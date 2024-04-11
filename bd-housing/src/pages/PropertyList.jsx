@@ -2,9 +2,12 @@ import { useContext, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { TbArrowUpRight } from "react-icons/tb";
 import { ContentContext } from "../provider/ContextProvider";
-import { ScrollRestoration } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import { MdOutlineVerticalAlignTop } from "react-icons/md";
+import { RiPriceTag2Line } from "react-icons/ri";
+import { TbCurrentLocation } from "react-icons/tb";
+import { FaRegDotCircle } from "react-icons/fa";
 const PropertyList = () => {
     const [value, setValue] = useState(25)
     const { propertyData } = useContext(ContentContext)
@@ -48,7 +51,7 @@ const PropertyList = () => {
                 <div className="mt-24 container mx-auto space-y-4">
                     <h1 className="text-center font-bold text-3xl">Our Featured Properties</h1>
                     <p className="text-center">Aliquam lacinia diam quis lacus euismod</p>
-                    <div className="grid grid-cols-4 py-12 gap-6">
+                    <div className="grid grid-cols-5 py-12 gap-6">
                         <div>
                             <div className="card bg-base-100 shadow-xl rounded-none">
                                 <div className="card-body space-y-4">
@@ -79,30 +82,30 @@ const PropertyList = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-span-3 grid grid-cols-3 gap-6">
+                        <div className="col-span-4 grid grid-cols-3 gap-6">
                             {
                                 propertyData.map(data => <>
                                     <div className="card card-compact bg-base-100 shadow-xl rounded-none">
-                                        <figure><img className="h-72 w-full object-cover" src={data.image} alt="Shoes" /></figure>
-                                        <div className="card-body">
-                                            <h2 className="card-title">{data.estate_title}</h2>
-                                            <p>132 Greene Ave</p>
-                                            <div className="flex gap-6 items-center">
-                                                <div className="flex gap-2 items-center">
-                                                    <div className="w-12 h-12 flex items-center justify-center">
-                                                        <img width="20" height="20" src="https://img.icons8.com/ios/50/length.png" alt="length" />
-                                                    </div>
-                                                    <p className="font-semibold text-primary">{data.area}</p>
-                                                </div>
-                                                <div className="flex gap-2 items-center">
-                                                    <div className="w-12 h-12 flex items-center justify-center">
-                                                        <img width="20" height="204" src="https://img.icons8.com/material-two-tone/24/spinner-frame-5.png" alt="spinner-frame-5" />
-                                                    </div>
-                                                    <p className="font-semibold text-primary">{data.status}</p>
-                                                </div>
+                                        <figure className="relative"><img className="h-72 w-full object-cover" src={data.image} alt="Shoes" />
+                                            <div className="flex gap-2 absolute bottom-4 right-4">
+                                                <p className="text-xs font-semibold text-primary bg-white p-2">{data.segment_name}</p>
+                                                <p className="text-xs font-semibold text-primary bg-white p-2">{data.area}</p>
                                             </div>
-                                            <div className="card-actions justify-end">
-                                                <button className="btn bg-primary text-white rounded-none">$ {data.price.split('/')[0]}</button>
+                                                <p className="absolute top-4 right-4 text-xs font-semibold text-white bg-[#EB6753] p-2 inline-flex gap-2 items-center"><FaRegDotCircle className="text-base"/>{data.status}</p>
+                                        </figure>
+                                        <div className="card-body space-y-2">
+                                            <h2 className="card-title">{data.estate_title}</h2>
+                                            <p className="text-base font-medium inline-flex items-center gap-2"><RiPriceTag2Line/>{data.price.split('/')[0]} $</p>
+                                            <p className="inline-flex font-medium gap-2 items-center"><TbCurrentLocation className="text-xl"/>{data.location}</p>
+                                            <div className="flex gap-1 justify-start flex-wrap">
+                                                {
+                                                    data.facilities.map(data => <>
+                                                        <span className="text-gray-500 text-xs border border-[#EB6753] p-1">{data}</span>
+                                                    </>)
+                                                }
+                                            </div>
+                                            <div className="card-actions justify-end ">
+                                                <Link to={`${data.id}`} className="btn bg-primary text-white rounded-none flex-1">View Property</Link>
                                             </div>
                                         </div>
                                     </div>
