@@ -28,13 +28,19 @@ const Login = () => {
     }
     const handleGoogleSignIn = () => {
         googleSignUp()
-            .then(() => setLogStatus("Login Success!"))
+            .then(() => {
+                toast.info("Login Success!")
+                navigate('/')
+            })
             .catch(() => toast.error("Something wrong!"))
 
     }
     const handleGithubSignIn = () => {
         gitHubSignIn()
-            .then(() => setLogStatus("Login Success!"))
+            .then(() => {
+                toast.info("Login Success!")
+                navigate('/')
+            })
             .catch(() => toast.error("Something wrong!"))
 
     }
