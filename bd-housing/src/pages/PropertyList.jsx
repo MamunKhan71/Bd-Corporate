@@ -17,8 +17,6 @@ const PropertyList = () => {
         setMaxData(parseInt((propertyData.sort((a, b) => parseInt(b.price.replaceAll(',', '')) - parseInt(a.price.replaceAll(',', ''))).slice(0, 1))[0].price.replaceAll(',','')))
     }, [propertyData])
     const statusFilter = (status) => {
-        console.log(status);
-        console.log(propertyData[0].status);
         setFilteredData(propertyData.filter(data => data.status == status))
     }
     const handleChange = (e) => {
@@ -73,20 +71,11 @@ const PropertyList = () => {
                                     <input onChange={handleChange} type="range" min={0} max={maxData} value={value} className="range range-xs" step="10000" />
                                     <div className="w-full flex justify-between text-xs px-2">
                                         <span>0</span>
-                                        <span>10k</span>
-                                        <span>20k</span>
-                                        <span>30k</span>
-                                        <span>40k</span>
-                                        <span>50k</span>
-                                    </div>
-                                    <div className="space-y-4">
-                                        <h1 className="font-bold">Beds</h1>
-                                        <div className="flex gap-4 justify-between items-center">
-                                            <button className="flex-1 border-primary btn border-2 text-primary bg-transparent rounded-none">1</button>
-                                            <button className="flex-1 border-primary btn border-2 text-primary bg-transparent rounded-none">2</button>
-                                            <button className="flex-1 border-primary btn border-2 text-primary bg-transparent rounded-none">3</button>
-                                            <button className="flex-1 border-primary btn border-2 text-primary bg-transparent rounded-none">4</button>
-                                        </div>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>{String(maxData).slice(0,2)}k</span>
                                     </div>
                                 </div>
                             </div>

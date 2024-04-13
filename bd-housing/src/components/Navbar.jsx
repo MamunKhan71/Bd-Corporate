@@ -97,6 +97,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-primary text-white text-lg w-52">
+                                    <li><Link to="/profile"  state={'/update'}>Update Profile</Link></li>
                                     <li><Link to="/profile">Profile</Link></li>
                                     <li><button className="" onClick={() => document.getElementById('my_modal_1').showModal()}>Logout</button></li>
                                     <dialog id="my_modal_1" className="modal">
