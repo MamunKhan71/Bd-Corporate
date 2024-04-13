@@ -8,7 +8,6 @@ const ContextProvider = ({children}) => {
         axios.get('real-estate.json')
             .then(res => setRealData(res.data.properties))
     },[])
-    console.log(propertyData);
     useEffect(()=>{
         axios.get('testimonial.json')
             .then(res => setTestimonial(res.data.testimonials))

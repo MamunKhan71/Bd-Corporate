@@ -16,7 +16,6 @@ const AuthProvider = ({ children }) => {
         })
         return unsubscribe;
     }, [])
-    console.log(user);
     const createNewUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
