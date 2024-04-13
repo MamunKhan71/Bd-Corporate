@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { TbArrowUpRight } from "react-icons/tb";
 import { ContentContext } from "../provider/ContextProvider";
@@ -10,11 +10,20 @@ import { TbCurrentLocation } from "react-icons/tb";
 import { FaRegDotCircle } from "react-icons/fa";
 const PropertyList = () => {
     const [value, setValue] = useState(25)
+    const [maxData, setMaxData] = useState([])
     const { propertyData } = useContext(ContentContext)
-
+    const [filteredData, setFilteredData] = useState([])
+    useEffect(() => {
+        setMaxData(parseInt((propertyData.sort((a, b) => parseInt(b.price.replaceAll(',', '')) - parseInt(a.price.replaceAll(',', ''))).slice(0, 1))[0].price.replaceAll(',','')))
+    }, [propertyData])
+    const statusFilter = (status) => {
+        console.log(status);
+        console.log(propertyData[0].status);
+        setFilteredData(propertyData.filter(data => data.status == status))
+    }
     const handleChange = (e) => {
-        console.log(e.target.value)
         setValue(e.target.value)
+        setFilteredData((propertyData.filter(data => parseInt(data.price.split('/')[0].replaceAll(',', '')) <= e.target.value)));
     }
     return (
         <div className="w-full container mx-auto mt-12 animate__animated animate__fadeIn">
@@ -57,11 +66,11 @@ const PropertyList = () => {
                                 <div className="card-body space-y-4">
                                     <h1 className="font-bold">Select Type</h1>
                                     <div className="flex gap-4 justify-between items-center">
-                                        <button className="flex-1 bg-primary btn text-white rounded-none">For Sale</button>
-                                        <button className="flex-1 border-primary btn border-2 text-primary bg-transparent rounded-none">For Rent</button>
+                                        <button className="flex-1 bg-primary btn text-white rounded-none" onClick={() => statusFilter('Sale')}>For Sale</button>
+                                        <button className="flex-1 border-primary btn border-2 text-primary bg-transparent rounded-none" onClick={() => statusFilter('Rent')}>For Rent</button>
                                     </div>
                                     <p className="font-semibold">Property Range</p>
-                                    <input onChange={handleChange} type="range" min={0} max={50000} value={value} className="range range-xs" step="10000" />
+                                    <input onChange={handleChange} type="range" min={0} max={maxData} value={value} className="range range-xs" step="10000" />
                                     <div className="w-full flex justify-between text-xs px-2">
                                         <span>0</span>
                                         <span>10k</span>
@@ -84,19 +93,19 @@ const PropertyList = () => {
                         </div>
                         <div className="col-span-4 grid grid-cols-3 gap-6">
                             {
-                                propertyData.map(data => <>
+                                filteredData.map(data => <>
                                     <div className="card card-compact bg-base-100 shadow-xl rounded-none">
                                         <figure className="relative"><img className="h-72 w-full object-cover" src={data.image} alt="Shoes" />
                                             <div className="flex gap-2 absolute bottom-4 right-4">
                                                 <p className="text-xs font-semibold text-primary bg-white p-2">{data.segment_name}</p>
                                                 <p className="text-xs font-semibold text-primary bg-white p-2">{data.area}</p>
                                             </div>
-                                                <p className="absolute top-4 right-4 text-xs font-semibold text-white bg-[#EB6753] p-2 inline-flex gap-2 items-center"><FaRegDotCircle className="text-base"/>{data.status}</p>
+                                            <p className="absolute top-4 right-4 text-xs font-semibold text-white bg-[#EB6753] p-2 inline-flex gap-2 items-center"><FaRegDotCircle className="text-base" />{data.status}</p>
                                         </figure>
                                         <div className="card-body space-y-2">
                                             <h2 className="card-title">{data.estate_title}</h2>
-                                            <p className="text-base font-medium inline-flex items-center gap-2"><RiPriceTag2Line/>{data.price.split('/')[0]} $</p>
-                                            <p className="inline-flex font-medium gap-2 items-center"><TbCurrentLocation className="text-xl"/>{data.location}</p>
+                                            <p className="text-base font-medium inline-flex items-center gap-2"><RiPriceTag2Line />{data.price.split('/')[0]} $</p>
+                                            <p className="inline-flex font-medium gap-2 items-center"><TbCurrentLocation className="text-xl" />{data.location}</p>
                                             <div className="flex gap-1 justify-start flex-wrap">
                                                 {
                                                     data.facilities.map(data => <>
