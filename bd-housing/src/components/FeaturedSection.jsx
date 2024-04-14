@@ -17,7 +17,7 @@ const FeaturedSection = () => {
     return (
         <div className="grid grid-cols-2">
             <div className="w-full">
-                <img className="w-full" src="/public/images/featured.jpeg" alt="featured" />
+                <img className="w-full h-[700px] object-cover" src={data.image} alt="featured" />
             </div>
             <div className="bg-[#eb675314] flex items-center justify-center flex-col">
                 <div className="space-y-8">

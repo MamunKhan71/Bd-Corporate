@@ -11,6 +11,7 @@ import PropertyList from "../pages/PropertyList";
 import About from "../pages/About";
 import Profile from "../pages/Profile";
 import PropertyDetails from "../pages/PropertyDetails";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 const router = createBrowserRouter([
     {
@@ -44,15 +45,14 @@ const router = createBrowserRouter([
             },
             {
                 path: '/profile',
-                element: <Profile/>
+                element: <ProtectedRoutes><Profile/></ProtectedRoutes>
             },
             {
-                path: 'properties/:id',
-                element: <PropertyDetails/>
-            }
+                path: '/properties/:id',
+                element: <ProtectedRoutes><PropertyDetails/></ProtectedRoutes>,
+            },
         ]
     },
 ]);
-
 
 export default router;

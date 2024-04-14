@@ -42,7 +42,7 @@ const FeaturedProperties = () => {
                                         }
                                     </div>
                                     <div className="card-actions justify-end ">
-                                        <Link to={`${data.id}`} className="btn bg-primary text-white rounded-none flex-1">View Property</Link>
+                                        <Link to={`properties/${data.id}`} className="btn bg-primary text-white rounded-none flex-1">View Property</Link>
                                     </div>
                                 </div>
                             </div>

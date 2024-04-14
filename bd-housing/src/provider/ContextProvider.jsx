@@ -5,11 +5,11 @@ const ContextProvider = ({children}) => {
     const [testimonial, setTestimonial] = useState([])
     const [propertyData, setRealData] = useState([])
     useEffect(()=>{
-        axios.get('real-estate.json')
+        axios.get('/real-estate.json')
             .then(res => setRealData(res.data.properties))
     },[])
     useEffect(()=>{
-        axios.get('testimonial.json')
+        axios.get('/testimonial.json')
             .then(res => setTestimonial(res.data.testimonials))
             .catch(error => console.log(error))
     },[])

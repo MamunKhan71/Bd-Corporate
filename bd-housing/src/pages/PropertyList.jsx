@@ -14,8 +14,14 @@ const PropertyList = () => {
     const { propertyData } = useContext(ContentContext)
     const [filteredData, setFilteredData] = useState([])
     useEffect(() => {
-        setMaxData(parseInt((propertyData.sort((a, b) => parseInt(b.price.replaceAll(',', '')) - parseInt(a.price.replaceAll(',', ''))).slice(0, 1))[0].price.replaceAll(',','')))
-    }, [propertyData])
+        if (propertyData.length > 0) {
+            const maxPrice = propertyData.reduce((max, property) => {
+                const price = parseInt(property.price.replaceAll(',', ''));
+                return price > max ? price : max;
+            }, 0);
+            setMaxData(maxPrice);
+        }
+    }, [propertyData]);
     const statusFilter = (status) => {
         setFilteredData(propertyData.filter(data => data.status == status))
     }
@@ -75,7 +81,7 @@ const PropertyList = () => {
                                         <span>|</span>
                                         <span>|</span>
                                         <span>|</span>
-                                        <span>{String(maxData).slice(0,2)}k</span>
+                                        <span>{String(maxData).slice(0, 2)}k</span>
                                     </div>
                                 </div>
                             </div>

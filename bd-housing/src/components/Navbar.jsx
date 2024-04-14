@@ -20,12 +20,6 @@ const Navbar = () => {
                 }
             >Properties</NavLink>
             <NavLink
-                to="/a"
-                className={({ isActive }) =>
-                    isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
-                }
-            >Members</NavLink>
-            <NavLink
                 to="/about"
                 className={({ isActive }) =>
                     isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"

@@ -3,7 +3,7 @@ const Footer = () => {
         <div className="bg-primary mt-48">
             <footer className="footer p-10 container mx-auto text-base-content">
                 <aside className="text-white">
-                    <img className="w-12 h-12" src="logo.png" alt="" />
+                    <img className="w-12 h-12" src="/logo.png" alt="" />
                     <p>BDCorporate<br />Providing reliable real estate since 1999</p>
                 </aside>
                 <nav className="text-white">
@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="bg-primary">
                 <footer className="footer text-white container mx-auto px-10 py-4 border-t border-base-300">
                     <aside className="items-center grid-flow-col">
-                        <img className="w-12 h-12" src="logo.png" alt="" />
+                        <img className="w-12 h-12" src="/logo.png" alt="" />
                         <p>BDCorporate <br />Providing reliable real estate since 1999</p>
                     </aside>
                     <nav className="md:place-self-center md:justify-self-end text-white">
