@@ -1,9 +1,9 @@
 import { TbArrowUpRight } from "react-icons/tb";
 const Features = () => {
     return (
-        <div className="my-12 container mx-auto">
+        <div className="my-12 container mx-auto space-y-4">
             <h1 className="text-primary font-bold text-center text-3xl">See how BDCorporate can help</h1>
-            <p className="text-gray-500 font-medium text-center">Aliquam lacinia diam quis lacus euismod</p>
+            <p className="text-gray-500 font-medium text-center">Let our expertise guide you to success.</p>
             <div className="grid grid-cols-3 gap-12 py-24">
                 <div className="card text-neutral-content rounded-none">
                     <div className="card-body items-center text-center text-primary space-y-4">
@@ -42,7 +42,7 @@ const Features = () => {
                             </defs>
                         </svg>
                         <h2 className="card-title">Buy a property</h2>
-                        <p>Nullam sollicitudin blandit eros eu pretium.</p>
+                        <p>Let us help you find the perfect fit for your needs.</p>
                         <div className="card-actions justify-end">
                             <button className="btn border-2 border-primary bg-transparent text-lg rounded-none">Find a office <TbArrowUpRight /></button>
                         </div>
@@ -85,7 +85,7 @@ const Features = () => {
                             </defs>
                         </svg>
                         <h2 className="card-title">Sell a property</h2>
-                        <p>Nullam sollicitudin blandit eros eu pretium.</p>
+                        <p>Sell fast and for the best price with our expertise.</p>
                         <div className="card-actions justify-end">
                             <button className="btn border-2 border-primary bg-primary text-white text-lg rounded-none">Place an ad <TbArrowUpRight /></button>
                         </div>
@@ -125,7 +125,7 @@ const Features = () => {
                             </defs>
                         </svg>
                         <h2 className="card-title">Rent a property</h2>
-                        <p>Nullam sollicitudin blandit eros eu pretium.</p>
+                        <p>Explore a wide range of properties to suit your needs.</p>
                         <div className="card-actions justify-end">
                             <button className="btn border-2 border-primary bg-transparent text-lg rounded-none">Find a rental <TbArrowUpRight /></button>
                         </div>

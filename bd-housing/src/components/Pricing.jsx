@@ -5,7 +5,7 @@ const Pricing = () => {
                 <div className="container px-4 mx-auto">
                     <div className="max-w-2xl mx-auto mb-16 text-center space-y-4">
                         <span className="text-4xl font-bold tracking-wider text-primary lg:text-5xl">Membership Plans</span>
-                        <h2 className="font-bold">Aliquam lacinia diam quis lacus euismod</h2>
+                        <h2 className="font-bold">Explore a wide range of plans to suit your needs.</h2>
                     </div>
                     <div className="flex flex-wrap items-stretch">
                         <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">

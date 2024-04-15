@@ -5,7 +5,7 @@ const About = () => {
             <div className="grid grid-cols-2 gap-6 w-full">
                 <div className="bg-[url(/images/PolygonLuminary.svg)] rounded-none w-full h-full p-12 bg-cover space-y-6 text-white">
                     <h1 className="text-white font-semibold text-4xl max-w-md">The New Way to Find
-                        Your Home</h1>
+                        Your Space</h1>
                     <p>From as low as $10 per day with
                         limited time offer discounts.</p>
                     <button className="btn bg-primary text-white rounded-none">
@@ -27,9 +27,8 @@ const About = () => {
                             </svg>
                         </div>
                         <h1 className="text-[#EB6753] text-2xl font-bold">01</h1>
-                        <p className="font-bold text-xl text-primary">Search Your Dream Home</p>
-                        <p className="text-[#717171]">Get ready to launch your real
-                            estate website without...</p>
+                        <p className="font-bold text-xl text-primary">Find Your Perfect Space</p>
+                        <p className="text-[#717171]">Narrow your search by property type, size, and location.</p>
                     </div>
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
@@ -45,9 +44,8 @@ const About = () => {
                             </svg>
                         </div>
                         <h1 className="text-[#EB6753] text-2xl font-bold">02</h1>
-                        <p className="font-bold text-xl text-primary">Choose The House You Like</p>
-                        <p className="text-[#717171]">Get ready to launch your real
-                            estate website without...</p>
+                        <p className="font-bold text-xl text-primary">Browse by Property Type</p>
+                        <p className="text-[#717171]">Explore office, retail, industrial, and more.</p>
                     </div>
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
@@ -63,9 +61,8 @@ const About = () => {
                             </svg>
                         </div>
                         <h1 className="text-[#EB6753] text-2xl font-bold">03</h1>
-                        <p className="font-bold text-xl text-primary">Enquire About This Property</p>
-                        <p className="text-[#717171]">Get ready to launch your real
-                            estate website without...</p>
+                        <p className="font-bold text-xl text-primary">Connect with an Agent</p>
+                        <p className="text-[#717171]">Get expert guidance to find your ideal space.</p>
                     </div>
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
@@ -81,11 +78,9 @@ const About = () => {
                             </svg>
                         </div>
                         <h1 className="text-[#EB6753] text-2xl font-bold">04</h1>
-                        <p className="font-bold text-xl text-primary">Own Your Home</p>
-                        <p className="text-[#717171]">Get ready to launch your real
-                            estate website without...</p>
+                        <p className="font-bold text-xl text-primary">Explore Market Insights</p>
+                        <p className="text-[#717171]">Discover trends, success stories, and industry news.</p>
                     </div>
-
                 </div>
             </div>
         </div>

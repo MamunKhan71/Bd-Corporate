@@ -14,9 +14,9 @@ const Cities = () => {
 
     return (
         <div className="container mx-auto mt-24">
-            <h1 className="text-3xl font-bold">Properties by Cities</h1>
+            <h1 className="text-3xl font-bold">Property by Cities</h1>
             <div className="flex justify-between items-center space-y-4">
-                <p>Aliquam lacinia diam quis lacus euismod</p>
+                <p>Explore Available Properties</p>
                 <p className="inline-flex items-center gap-2">See All Cities <TbArrowUpRight /></p>
             </div>
             <div>

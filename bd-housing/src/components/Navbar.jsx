@@ -7,31 +7,31 @@ const Navbar = () => {
     const navigate = useNavigate()
     const { user, logout } = useContext(AuthContext)
     const navLinks =
-        <div className="flex gap-12 text-lg">
+        <div className="flex gap-4 lg:gap-12 text-lg flex-col lg:flex-row">
             <NavLink
                 to="/"
                 className={({ isActive }) =>
-                    isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
+                    isActive ? " text-primary font-bold animate__animated animate__fadeIn" : "text-primary font-semibold shadow-none"
                 }
             >Home</NavLink>
             <NavLink
                 to="/properties"
                 className={({ isActive }) =>
-                    isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
+                    isActive ? " text-primary font-bold animate__animated animate__fadeIn" : "text-primary font-semibold shadow-none"
                 }
             >Properties</NavLink>
             {
                 user && <NavLink
                     to="/Bookmarks"
                     className={({ isActive }) =>
-                        isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
+                        isActive ? " text-primary font-bold animate__animated animate__fadeIn" : "text-primary font-semibold shadow-none"
                     }
                 >Bookmarks</NavLink>
             }
             <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                    isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
+                    isActive ? " text-primary font-bold animate__animated animate__fadeIn" : "text-primary font-semibold shadow-none"
                 }
             >Contact Us</NavLink>
 
@@ -51,8 +51,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex gap-2 items-center">
-                        <img className="w-10 h-10" src="/logo.png" alt="logo" />
-                        <Link to="/" className="text-3xl font-bold">BDCorporate</Link>
+                        <img className="w-6 lg:w-10 h-6 lg:h-10" src="/logo.png" alt="logo" />
+                        <Link to="/" className="text-lg lg:text-3xl font-bold">BDCorporate</Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
