@@ -1,8 +1,8 @@
 import { FaRegQuestionCircle } from "react-icons/fa";
 const About = () => {
     return (
-        <div className="my-24 container mx-auto">
-            <div className="grid grid-cols-2 gap-6 w-full">
+        <div className="my-12 lg:my-24 container mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 w-full">
                 <div className="bg-[url(/images/PolygonLuminary.svg)] rounded-none w-full h-full p-12 bg-cover space-y-6 text-white">
                     <h1 className="text-white font-semibold text-4xl max-w-md">The New Way to Find
                         Your Space</h1>
@@ -12,7 +12,7 @@ const About = () => {
                         How it works <FaRegQuestionCircle className="text-xl" />
                     </button>
                 </div>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-4 lg:gap-6">
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">

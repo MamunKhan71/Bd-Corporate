@@ -13,14 +13,14 @@ const Cities = () => {
     const cities = Object.entries(citiesCount);
 
     return (
-        <div className="container mx-auto mt-24">
-            <h1 className="text-3xl font-bold">Property by Cities</h1>
+        <div className="container mx-auto mt-12 lg:mt-24">
+            <h1 className="text-2xl lg:text-3xl font-bold">Property by Cities</h1>
             <div className="flex justify-between items-center space-y-4">
                 <p>Explore Available Properties</p>
                 <p className="inline-flex items-center gap-2">See All Cities <TbArrowUpRight /></p>
             </div>
             <div>
-                <div className="grid grid-cols-4 gap-6 my-12">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 my-12">
                     {cities.map(([city, count]) => (
                         <div key={city} className="flex gap-4 items-center bg-base-200 p-4 rounded-none hover:cursor-pointer" title={`See all cities from ${city}`}>
                             <div>

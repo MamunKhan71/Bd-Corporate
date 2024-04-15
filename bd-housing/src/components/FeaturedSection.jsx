@@ -15,11 +15,11 @@ const FeaturedSection = () => {
     }
 
     return (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="w-full">
-                <img className="w-full h-[700px] object-cover" src={data.image} alt="featured" />
+                <img className="w-full lg:h-[700px] object-cover" src={data.image} alt="featured" />
             </div>
-            <div className="bg-[#eb675314] flex items-center justify-center flex-col">
+            <div className="bg-[#eb675314] flex items-center justify-center flex-col my-6 p-4">
                 <div className="space-y-8">
                     <div className="flex gap-4">
                         <button className="btn bg-[#EB6753] text-white rounded-none">
@@ -29,9 +29,9 @@ const FeaturedSection = () => {
                             <img width="20" height="20" src="https://img.icons8.com/material-outlined/24/FFFFFF/circled-dot.png" alt="circled-dot" />For {data.status}
                         </button>
                     </div>
-                    <h1 className="text-primary font-bold text-5xl">{data.estate_title}</h1>
+                    <h1 className="text-primary font-bold text-2xl lg:text-5xl">{data.estate_title}</h1>
                     <p className="text-[#717171] text-lg">{data.location}</p>
-                    <div className="flex gap-6 items-center">
+                    <div className="flex gap-6 items-center flex-wrap lg:flex-nowrap">
                         <div className="flex gap-2 items-center">
                             <div className="bg-base-100 shadow-md rounded-none w-12 h-12 flex items-center justify-center">
                                 <img width="20" height="20" src="https://img.icons8.com/ios/50/length.png" alt="length" />
