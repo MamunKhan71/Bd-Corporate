@@ -1,6 +1,8 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 export const ContentContext = createContext()
+
 const ContextProvider = ({ children }) => {
     const [testimonial, setTestimonial] = useState([])
     const [propertyData, setRealData] = useState([])
@@ -9,13 +11,19 @@ const ContextProvider = ({ children }) => {
     const getId = (id) => {
         const localStorages = localStorage.getItem('pMarks')
         if (localStorages) {
-            const localData = JSON.parse(localStorages);
-            const updatedData = [...localData, id];
-            setBookmark(updatedData);
-            localStorage.setItem('pMarks', JSON.stringify(updatedData));
+            if (JSON.parse(localStorages).includes(id)) {
+                toast.error("Bookmark Already Exists!")
+            } else {
+                const localData = JSON.parse(localStorages);
+                const updatedData = [...localData, id];
+                setBookmark(updatedData);
+                localStorage.setItem('pMarks', JSON.stringify(updatedData));
+                toast.success("Bookmark added successfully!")
+            }
         } else {
             localStorage.setItem('pMarks', JSON.stringify([id]));
             setBookmark(JSON.parse(localStorage.getItem('pMarks')));
+            toast.success("Bookmark added successfully!")
         }
     }
     useEffect(() => {

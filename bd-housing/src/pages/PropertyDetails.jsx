@@ -11,7 +11,6 @@ const PropertyDetails = () => {
     const [data, setProperty] = useState(null);
     const bookmark = (id) => {
         getId(id)
-        toast.success("Bookmark added successfully!")
     }
     useEffect(() => {
         if (propertyData && id) {

@@ -16,7 +16,6 @@ const Bookmarks = () => {
             setData(null)
         }
     }, [propertyData])
-    console.log(data);
     return (
         <div>
             <Helmet>
