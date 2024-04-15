@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import '/src/index.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 const Root = () => {
     return (
         <div className="font-poppins">

@@ -5,6 +5,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import 'animate.css';
+import { Helmet } from "react-helmet";
 const Login = () => {
     const navigate = useNavigate()
     const [passStatus, setPassStatus] = useState(false)
@@ -50,6 +51,9 @@ const Login = () => {
 
     return (
         <div className="w-full lg:w-96 mx-auto">
+            <Helmet>
+                <title>BDCorporate | Login</title>
+            </Helmet>
             <div className="flex items-center justify-center h-auto lg:h-[calc(100dvh-90px)] animate__animated animate__fadeIn">
                 <div className="flex flex-col items-center font-poppins w-full lg:pb-12">
                     <div className="space-y-7 flex items-center flex-col w-full">

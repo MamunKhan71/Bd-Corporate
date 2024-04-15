@@ -8,7 +8,6 @@ import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
 import ContactUs from "../pages/ContactUs";
 import PropertyList from "../pages/PropertyList";
-import About from "../pages/About";
 import Profile from "../pages/Profile";
 import PropertyDetails from "../pages/PropertyDetails";
 import ProtectedRoutes from "./ProtectedRoutes";
@@ -40,10 +39,6 @@ const router = createBrowserRouter([
             {
                 path: '/properties',
                 element: <PropertyList/>
-            },
-            {
-                path: '/about',
-                element: <About/>
             },
             {
                 path: '/profile',

@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const Profile = () => {
@@ -23,8 +24,18 @@ const Profile = () => {
     }
     return (
         <div className="w-full flex justify-center items-center h-screen">
+
+            {
+                location.state ? <Helmet>
+                    <title>BDCorporate | Update Profile</title>
+                </Helmet> : <Helmet>
+                    <title>BDCorporate | Profile</title>
+                </Helmet>
+            }
+
             {
                 user ? <>
+
                     <div className="p-12 shadow-md sm:px-12 text-primary space-y-4">
                         <img src={user.photoURL ? user.photoURL : '/images/avatar.png'} alt="" className="w-32 h-32 mx-auto rounded-full aspect-square ring ring-primary ring-offset-base-100 ring-offset-4" />
                         <div className="space-y-4 text-center divide-y divide-gray-700 text-primary">

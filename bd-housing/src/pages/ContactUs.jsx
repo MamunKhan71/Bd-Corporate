@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet";
+
 const ContactUs = () => {
     return (
         <div>
             <>
                 <>
+                <Helmet>
+                    <title>BDCorporate | Contact Us</title>
+                </Helmet>
                     {/* Container for demo purpose */}
                     <div className="container my-24 mx-auto md:px-6 animate__animated animate__fadeIn">
                         {/* Section: Design Block */}

@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { AuthContext } from "../provider/AuthProvider";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet";
+
 const Register = () => {
     const { createNewUser, googleSignUp, gitHubSignIn, updateUserProfile, logout, user } = useContext(AuthContext)
     const [logStatus, setLogStatus] = useState('')
@@ -72,10 +74,13 @@ const Register = () => {
             toast.error(e.message);
         }
     };
-    
+
 
     return (
         <div className="w-full lg:w-96 mx-auto animate__animated animate__fadeIn">
+            <Helmet>
+                <title>BDCorporate | Register</title>
+            </Helmet>
             <div className="flex items-center justify-center h-auto lg:h-[calc(100dvh-90px)] ">
                 <div className="flex flex-col items-center font-poppins w-full lg:pb-12">
                     <div className="space-y-7 flex items-center flex-col w-full">

@@ -10,11 +10,15 @@ import Pricing from "../components/Pricing";
 import Testimonial from "../components/Testimonial";
 import ScrollToTop from "react-scroll-to-top";
 import { MdOutlineVerticalAlignTop } from "react-icons/md";
+import { Helmet } from "react-helmet";
 const Home = () => {
 
 
     return (
         <div>
+            <Helmet>
+                <title>BDCorporate | Home</title>
+            </Helmet>
             <div className="h-[80dvh]">
                 <Hero />
             </div>

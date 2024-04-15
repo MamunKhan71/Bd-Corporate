@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { ContentContext } from "../provider/ContextProvider";
 import { MdBookmarks } from "react-icons/md";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
+
 const PropertyDetails = () => {
     const id = useParams('id').id
     const { propertyData, getId } = useContext(ContentContext)
@@ -25,6 +27,9 @@ const PropertyDetails = () => {
 
     return (
         <>
+            <Helmet>
+                <title>BDCorporate | {data ? data.estate_title : 'Property Details'}</title>
+            </Helmet>
             {!data ?
                 <>
                     <span className="loading loading-infinity loading-lg"></span>

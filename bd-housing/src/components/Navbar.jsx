@@ -20,12 +20,14 @@ const Navbar = () => {
                     isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
                 }
             >Properties</NavLink>
-            <NavLink
-                to="/Bookmarks"
-                className={({ isActive }) =>
-                    isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
-                }
-            >Bookmarks</NavLink>
+            {
+                user && <NavLink
+                    to="/Bookmarks"
+                    className={({ isActive }) =>
+                        isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
+                    }
+                >Bookmarks</NavLink>
+            }
             <NavLink
                 to="/contact"
                 className={({ isActive }) =>

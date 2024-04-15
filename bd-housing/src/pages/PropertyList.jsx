@@ -8,6 +8,8 @@ import { MdOutlineVerticalAlignTop } from "react-icons/md";
 import { RiPriceTag2Line } from "react-icons/ri";
 import { TbCurrentLocation } from "react-icons/tb";
 import { FaRegDotCircle } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+
 const PropertyList = () => {
     const [value, setValue] = useState(25)
     const [maxData, setMaxData] = useState([])
@@ -31,6 +33,9 @@ const PropertyList = () => {
     }
     return (
         <div className="w-full container mx-auto mt-12 animate__animated animate__fadeIn">
+            <Helmet>
+                <title>BDCorporate | Property Lists</title>
+            </Helmet>
             <div className="h-[600px] px-96 space-y-4 flex flex-col items-center justify-center w-full bg-[url(/images/banner.jpeg)] bg-cover rounded-2xl">
                 <h1 className="text-5xl leading-[70px] text-center font-bold ">Easy Way to Find a Perfect Property</h1>
                 <p>From as low as $10 per day with limited time offer discounts.</p>

@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import 'animate.css';
+import { Helmet } from "react-helmet";
 
 const NotFound = () => {
     return (
         <>
+            <Helmet>
+                <title>BDCorporate | 404 Not Found</title>
+            </Helmet>
             <section className="relative z-10 bg-primary h-dvh flex items-center justify-center bg-[url(/images/Hexagon.svg)]">
                 <div className="container mx-auto">
                     <div className="-mx-4 flex">
@@ -31,7 +35,7 @@ const NotFound = () => {
                         </div>
                     </div>
                 </div>
-                
+
             </section>
         </>
 
