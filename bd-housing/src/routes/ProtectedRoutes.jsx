@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -6,13 +6,14 @@ import { useEffect } from "react";
 const ProtectedRoutes = ({ children }) => {
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
+    const isAuth = localStorage.getItem('isAuth');
     useEffect(() => {
-        if (!user) {
+        if (!isAuth) {
             navigate('/login');
         }
-    }, [user, navigate]);
+    }, [isAuth, navigate]);
 
-    return user ? children : null;
+    return isAuth ? children : null;
 };
 
 export default ProtectedRoutes;

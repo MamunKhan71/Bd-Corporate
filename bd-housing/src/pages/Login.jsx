@@ -19,6 +19,7 @@ const Login = () => {
         const password = data.password
         signInEmail(email, password)
             .then(() => {
+                localStorage.setItem('isAuth', 'authenticated')
                 setLogStatus("Login Successful!")
                 navigate('/')
             })
@@ -29,6 +30,7 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         googleSignUp()
             .then(() => {
+                localStorage.setItem('isAuth', 'authenticated')
                 toast.info("Login Success!")
                 navigate('/')
             })
@@ -38,6 +40,7 @@ const Login = () => {
     const handleGithubSignIn = () => {
         gitHubSignIn()
             .then(() => {
+                localStorage.setItem('isAuth', 'authenticated')
                 toast.info("Login Success!")
                 navigate('/')
             })
