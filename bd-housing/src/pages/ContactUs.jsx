@@ -5,13 +5,13 @@ const ContactUs = () => {
         <div>
             <>
                 <>
-                <Helmet>
-                    <title>BDCorporate | Contact Us</title>
-                </Helmet>
+                    <Helmet>
+                        <title>BDCorporate | Contact Us</title>
+                    </Helmet>
                     {/* Container for demo purpose */}
-                    <div className="container my-24 mx-auto md:px-6 animate__animated animate__fadeIn">
+                    <div className="container my-12 lg:my-24 mx-auto md:px-6 animate__animated animate__fadeIn p-4">
                         {/* Section: Design Block */}
-                        <section className="mb-32">
+                        <section className="mb-16 lg:mb-32">
                             <div className="flex justify-center">
                                 <div className="text-center md:max-w-xl lg:max-w-3xl">
                                     <h2 className="mb-12 px-6 text-3xl font-bold">Contact us</h2>
@@ -115,10 +115,10 @@ const ContactUs = () => {
                                                         Technical support
                                                     </p>
                                                     <p className="text-primary ">
-                                                        support@example.com
+                                                        support@bdcorporate.com
                                                     </p>
                                                     <p className="text-primary ">
-                                                        +1 234-567-89
+                                                        +880 123-456-789
                                                     </p>
                                                 </div>
                                             </div>
@@ -148,10 +148,10 @@ const ContactUs = () => {
                                                         Sales questions
                                                     </p>
                                                     <p className="text-primary ">
-                                                        sales@example.com
+                                                        sales@bdcorporate.com
                                                     </p>
                                                     <p className="text-primary ">
-                                                        +1 234-567-89
+                                                        +880 153-456-788
                                                     </p>
                                                 </div>
                                             </div>
@@ -179,10 +179,10 @@ const ContactUs = () => {
                                                 <div className="ml-6 grow">
                                                     <p className="mb-2 font-bold text-primary">Press</p>
                                                     <p className="text-primary ">
-                                                        press@example.com
+                                                        press@bdcorporate.com
                                                     </p>
                                                     <p className="text-primary ">
-                                                        +1 234-567-89
+                                                        +880 223-956-789
                                                     </p>
                                                 </div>
                                             </div>
@@ -210,10 +210,10 @@ const ContactUs = () => {
                                                 <div className="ml-6 grow">
                                                     <p className="mb-2 font-bold text-primary">Bug report</p>
                                                     <p className="text-primary ">
-                                                        bugs@example.com
+                                                        bugs@bdcorporate.com
                                                     </p>
                                                     <p className="text-primary ">
-                                                        +1 234-567-89
+                                                        +880 133-400-789
                                                     </p>
                                                 </div>
                                             </div>
