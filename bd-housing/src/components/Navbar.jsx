@@ -21,11 +21,11 @@ const Navbar = () => {
                 }
             >Properties</NavLink>
             <NavLink
-                to="/about"
+                to="/Bookmarks"
                 className={({ isActive }) =>
                     isActive ? " text-primary font-bold animate-pulse" : "text-primary font-semibold shadow-none"
                 }
-            >About</NavLink>
+            >Bookmarks</NavLink>
             <NavLink
                 to="/contact"
                 className={({ isActive }) =>

@@ -12,6 +12,8 @@ import About from "../pages/About";
 import Profile from "../pages/Profile";
 import PropertyDetails from "../pages/PropertyDetails";
 import ProtectedRoutes from "./ProtectedRoutes";
+import Bookmarks from "../pages/Bookmarks";
+
 
 const router = createBrowserRouter([
     {
@@ -51,6 +53,11 @@ const router = createBrowserRouter([
                 path: '/properties/:id',
                 element: <ProtectedRoutes><PropertyDetails/></ProtectedRoutes>,
             },
+            {
+                path: '/bookmarks',
+                element: <ProtectedRoutes><Bookmarks/></ProtectedRoutes>,
+
+            }
         ]
     },
 ]);

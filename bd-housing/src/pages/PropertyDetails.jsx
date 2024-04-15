@@ -1,12 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ContentContext } from "../provider/ContextProvider";
-
+import { MdBookmarks } from "react-icons/md";
+import { toast } from "react-toastify";
 const PropertyDetails = () => {
     const id = useParams('id').id
-    const { propertyData } = useContext(ContentContext)
+    const { propertyData, getId } = useContext(ContentContext)
     const [data, setProperty] = useState(null);
-
+    const bookmark = (id) => {
+        getId(id)
+        toast.success("Bookmark added successfully!")
+    }
     useEffect(() => {
         if (propertyData && id) {
             const foundProperty = propertyData.find(prop => prop.id == id)
@@ -54,7 +58,19 @@ const PropertyDetails = () => {
                             <div className="col-span-2">
                                 <div className="card bg-base-100 shadow-xl rounded-none">
                                     <div className="card-body space-y-4">
-                                        <h2 className="card-title">Property Details</h2>
+                                        <div className="flex justify-between items-center">
+                                            <h2 className="card-title">Property Details</h2>
+                                            <button onClick={() => bookmark(data.id)}
+                                                className="group relative inline-block overflow-hidden border border-gray-100 bg-gray-200 px-12 py-3 text-sm font-medium text-slate-800 hover:text-violet-600 focus:outline-none focus:ring active:bg-indigo-600 active:text-white">
+                                                <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-violet-600 transition-all duration-200 group-hover:w-full"></span>
+                                                <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-violet-600 transition-all duration-200 group-hover:h-full"></span>
+                                                <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-violet-600 transition-all duration-200 group-hover:w-full"></span>
+                                                <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-violet-600 transition-all duration-200 group-hover:h-full"></span>
+                                                <div className="flex gap-2 items-center justify-center">
+                                                    <MdBookmarks />Bookmark
+                                                </div>
+                                            </button>
+                                        </div>
                                         <hr />
                                         <div className="flex justify-between">
                                             <div className="space-y-4 font-semibold">
