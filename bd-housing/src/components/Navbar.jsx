@@ -1,9 +1,10 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { TbArrowUpRight } from "react-icons/tb";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 const Navbar = () => {
     const location = useLocation().pathname
+    const navigate = useNavigate()
     const { user, logout } = useContext(AuthContext)
     const navLinks =
         <div className="flex gap-12 text-lg">
@@ -85,13 +86,13 @@ const Navbar = () => {
                             }
                         </> : <>
                             <div className="dropdown dropdown-end">
-                                <div data-tip={user.displayName}  tabIndex={0} role="button" className="avatar tooltip tooltip-bottom">
+                                <div data-tip={user.displayName} tabIndex={0} role="button" className="avatar tooltip tooltip-bottom">
                                     <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                         <img src={user.photoURL} />
                                     </div>
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-primary text-white text-lg w-52">
-                                    <li><Link to="/profile"  state={'/update'}>Update Profile</Link></li>
+                                    <li><Link to="/profile" state={'/update'}>Update Profile</Link></li>
                                     <li><Link to="/profile">Profile</Link></li>
                                     <li><button className="" onClick={() => document.getElementById('my_modal_1').showModal()}>Logout</button></li>
                                     <dialog id="my_modal_1" className="modal">
@@ -100,7 +101,10 @@ const Navbar = () => {
                                             <div className="modal-action justify-center">
                                                 <form method="dialog">
                                                     <div className="flex gap-4">
-                                                        <button className="btn rounded-none bg-primary text-white" onClick={logout}>Logout</button>
+                                                        <button className="btn rounded-none bg-primary text-white" onClick={() => {
+                                                            logout()
+                                                                .then(navigate('/'))
+                                                        }}>Logout</button>
                                                         <button className="btn rounded-none">Cancel</button>
                                                     </div>
                                                 </form>
