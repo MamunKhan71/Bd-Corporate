@@ -3,8 +3,8 @@ const About = () => {
     return (
         <div className="my-24 container mx-auto">
             <div className="grid grid-cols-2 gap-6 w-full">
-                <div className="bg-[url(/images/PolygonLuminary.svg)] rounded-none w-full h-full p-12 bg-cover space-y-4 text-white">
-                    <h1 className="text-white font-semibold text-2xl max-w-xs">The New Way to Find
+                <div className="bg-[url(/images/PolygonLuminary.svg)] rounded-none w-full h-full p-12 bg-cover space-y-6 text-white">
+                    <h1 className="text-white font-semibold text-4xl max-w-md">The New Way to Find
                         Your Home</h1>
                     <p>From as low as $10 per day with
                         limited time offer discounts.</p>
