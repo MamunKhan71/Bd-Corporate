@@ -3,13 +3,13 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 
 const Profile = () => {
     const location = useLocation()
-    console.log(location);
+    const navigate = useNavigate()
     const { logout, user, updateUserProfile } = useContext(AuthContext)
     const {
         register,
@@ -17,10 +17,13 @@ const Profile = () => {
     } = useForm()
     const profileUpdate = (data) => {
         updateUserProfile(data.name, data.photoUrl)
-            .then(() => toast.success("Profile Updated Successfully!", {
-                style: { background: '#181A20', color: 'white' }
-            }))
-            .catch(() => toast.error("Something went wrong!"))
+            .then(() => {
+                toast.success("Profile Updated Successfully!", {
+                    style: { background: '#181A20', color: 'white' }
+                })
+                navigate('/profile')
+            })
+            .catch(() => toast.error("Something went wrong!"));
     }
     return (
         <div className="w-full flex justify-center items-center h-screen">
@@ -60,11 +63,11 @@ const Profile = () => {
                                             <div className="flex gap-4">
                                                 <div className="flex flex-col gap-2">
                                                     <span className="label-text font-semibold text-primary">Name</span>
-                                                    <input {...register('name')} type="text" placeholder="Type here" className="input input-bordered input-accent w-full rounded-none" />
+                                                    <input {...register('name')} type="text" defaultValue={user.displayName || 'Type Here'} className="input input-bordered input-accent w-full rounded-none" />
                                                 </div>
                                                 <div className="flex flex-col gap-2">
                                                     <span className="label-text font-semibold text-primary">Photo Url</span>
-                                                    <input {...register('photoUrl')} type="text" placeholder="Type here" className="input input-bordered input-accent w-full rounded-none" />
+                                                    <input {...register('photoUrl')} type="text" defaultValue={user.photoURL || "Type Here"} className="input input-bordered input-accent w-full rounded-none" />
                                                 </div>
                                             </div>
                                         </div>

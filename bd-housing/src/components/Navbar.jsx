@@ -51,7 +51,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex gap-2 items-center">
-                        <img className="w-10 h-10" src="/public/logo.png" alt="logo" />
+                        <img className="w-10 h-10" src="/logo.png" alt="logo" />
                         <Link to="/" className="text-3xl font-bold">BDCorporate</Link>
                     </div>
                 </div>

@@ -9,12 +9,12 @@ const CompanySlider = () => {
                         <img src="/images/Bashundhara_Group.png" className='invert brightness-0' alt="" />
                         <img src="/images/shanta.png" className='invert brightness-0' alt="" />
                         <img src="/images/shelter.png" className='invert brightness-0' alt="" />
-                        <img src="/public/images/amin.png" className='invert brightness-0' alt="" />
-                        <img src="/public/images/concordlogo.png" className='invert brightness-0' alt="" />
-                        <img src="/public/images/Adler_Real_Estate.png" className='invert brightness-0' alt="" />
-                        <img src="/public/images/white.png" className='invert brightness-0' alt="" />
-                        <img src="/public/images/reals.png" className='invert brightness-0' alt="" />
-                        <img src="/public/images/board.png" className='invert brightness-0' alt="" />
+                        <img src="/images/amin.png" className='invert brightness-0' alt="" />
+                        <img src="/images/concordlogo.png" className='invert brightness-0' alt="" />
+                        <img src="/images/Adler_Real_Estate.png" className='invert brightness-0' alt="" />
+                        <img src="/images/white.png" className='invert brightness-0' alt="" />
+                        <img src="/images/reals.png" className='invert brightness-0' alt="" />
+                        <img src="/images/board.png" className='invert brightness-0' alt="" />
                     </div>
                 </Marquee>
             </div>
