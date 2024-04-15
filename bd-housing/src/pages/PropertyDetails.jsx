@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ContentContext } from "../provider/ContextProvider";
 import { MdBookmarks } from "react-icons/md";
-import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 
 const PropertyDetails = () => {
@@ -35,13 +34,13 @@ const PropertyDetails = () => {
                 </> :
 
                 <>
-                    <div className="container mx-auto space-y-8 my-12">
-                        <div className="w-full h-[600px] flex items-center justify-center bg-[url(/images/wavey-fingerprint.svg)]">
-                            <img className="h-96 w-96 object-cover ring-2 ring-offset-4 shadow-2xl" src={data.image} alt="header" />
+                    <div className="container mx-auto space-y-4 lg:space-y-8 my-6 lg:my-12 p-4">
+                        <div className="w-full lg:h-[600px] flex items-center justify-center bg-[url(/images/wavey-fingerprint.svg)]">
+                            <img className="lg:h-96 lg:w-96 object-cover ring-2 ring-offset-4 shadow-2xl" src={data.image} alt="header" />
                         </div>
-                        <div className="grid grid-cols-6 gap-6 items-center">
-                            <div className="col-span-4 space-y-8">
-                                <h1 className="text-3xl font-bold">{data.estate_title}</h1>
+                        <div className="block lg:grid grid-cols-1 lg:grid-cols-6 gap-4 lg:gap-6 items-center">
+                            <div className="lg:col-span-4 space-y-4 lg:space-y-8">
+                                <h1 className="text-2xl lg:text-3xl font-bold">{data.estate_title}</h1>
                                 <h1 className="text-xl font-bold">Price : {data.price} $</h1>
                                 <p className="text-justify leading-8">{data.description}</p>
                                 <h1 className="text-2xl font-bold">Facilities</h1>
@@ -59,7 +58,7 @@ const PropertyDetails = () => {
                                     }
                                 </div>
                             </div>
-                            <div className="col-span-2">
+                            <div className="col-span-2 my-4 lg:my-0">
                                 <div className="card bg-base-100 shadow-xl rounded-none">
                                     <div className="card-body space-y-4">
                                         <div className="flex justify-between items-center">

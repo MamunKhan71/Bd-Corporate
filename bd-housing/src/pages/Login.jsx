@@ -50,7 +50,7 @@ const Login = () => {
     }
 
     return (
-        <div className="w-full lg:w-96 mx-auto">
+        <div className="w-full lg:w-96 mx-auto p-4 lg:p-0">
             <Helmet>
                 <title>BDCorporate | Login</title>
             </Helmet>
