@@ -77,7 +77,7 @@ const Register = () => {
 
 
     return (
-        <div className="w-full lg:w-96 mx-auto animate__animated animate__fadeIn px-4 lg:px-0 mt-12">
+        <div className="w-full lg:w-96 mx-auto animate__animated animate__fadeIn px-4 lg:px-0 mt-12 lg:mt-28">
             <Helmet>
                 <title>BDCorporate | Register</title>
             </Helmet>

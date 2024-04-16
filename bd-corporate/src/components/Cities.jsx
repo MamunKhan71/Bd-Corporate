@@ -16,7 +16,7 @@ const Cities = () => {
             <h1 className="text-2xl lg:text-3xl font-bold">Property by Cities</h1>
             <p className="text-gray-500 font-medium text-center">Explore Available Properties</p>
             <div>
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6 my-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 my-12">
                     {cities.map(([city, count]) => (
                         <div key={city} className="text-left flex gap-4 items-center bg-base-200 p-4 rounded-none hover:cursor-pointer" title={`See all cities from ${city}`}>
                             <div>

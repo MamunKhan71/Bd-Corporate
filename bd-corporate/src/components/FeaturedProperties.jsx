@@ -14,7 +14,7 @@ const FeaturedProperties = () => {
         <div className="container mx-auto space-y-4">
             <h1 className="text-center font-bold text-2xl lg:text-3xl">Our Featured Properties</h1>
             <p className="text-center">Start your property search here.</p>
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-12">
                 {
                     data.map(data => (
                         <>

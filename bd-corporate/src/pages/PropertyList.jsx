@@ -96,7 +96,7 @@ const PropertyList = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-span-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div className="col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {
                                 filteredData.map(data => <>
                                     <div className="card card-compact bg-base-100 shadow-xl rounded-none">

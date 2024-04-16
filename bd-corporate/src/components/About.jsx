@@ -12,7 +12,7 @@ const About = () => {
                         How it works <FaRegQuestionCircle className="text-lg lg:text-xl" />
                     </button>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-6">
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
