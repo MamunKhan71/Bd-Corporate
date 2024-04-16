@@ -1,0 +1,184 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "segment_name": "Commercial",
+      "estate_title": "Downtown Office Building",
+      "image": "https://i.ibb.co/McdhdLF/downtown.jpg",
+      "description": "Modern office building located in the heart of downtown Dhaka. Close proximity to public transportation and amenities. This modern office building offers a prime location in the bustling city center, making it an attractive option for businesses looking to establish a presence in Dhaka's commercial hub. With its contemporary design and efficient use of space, this building provides a professional and productive work environment for tenants. The building features a range of amenities, including open floor offices, conference rooms, and a parking garage, catering to the needs of modern businesses. Whether you're a startup looking for flexible workspace or a corporate firm seeking a prestigious address, this property has something to offer for everyone.",
+      "price": "25,00,000",
+      "status": "Sale",
+      "area": "10,000 sq ft",
+      "location": "Downtown, Dhaka",
+      "city": "Dhaka",
+      "facilities": [
+        "Open floor offices",
+        "Conference rooms",
+        "Parking garage"
+      ],
+      "view_property_button": "https://example.com/view_property/1",
+      "contact_person": "John Doe",
+      "contact_number": "+8801234567890"
+    },
+    {
+      "id": 2,
+      "segment_name": "Commercial",
+      "estate_title": "Retail Space in Shopping Mall",
+      "image": "https://i.ibb.co/fQKZZks/pexels-robin-1020370.jpg",
+      "description": "Prime retail space available in bustling shopping mall. High foot traffic and excellent visibility. This retail space is situated in a highly sought-after shopping mall, offering unparalleled exposure to a large volume of potential customers. With its strategic location and attractive storefront, this space presents an ideal opportunity for retailers to showcase their products and attract shoppers. The space features storefront windows, a storage room, and restroom facilities, providing convenience and comfort for both customers and staff. Whether you're launching a new retail venture or expanding an existing brand, this property provides the perfect platform for success.",
+      "price": "10,000/month",
+      "status": "Rent",
+      "area": "2,000 sq ft",
+      "location": "Shopping Mall, Chittagong",
+      "city": "Chittagong",
+      "facilities": [
+        "Storefront windows",
+        "Storage room",
+        "Restroom"
+      ],
+      "view_property_button": "https://example.com/view_property/2",
+      "contact_person": "Jane Smith",
+      "contact_number": "+8809876543210"
+    },
+    {
+      "id": 3,
+      "segment_name": "Commercial",
+      "estate_title": "Industrial Warehouse",
+      "image": "https://i.ibb.co/MfGtzxs/warehouse.jpg",
+      "description": "Spacious industrial warehouse suitable for manufacturing or storage. Easy access to major highways. This spacious industrial warehouse offers a versatile space for a variety of industrial activities, including manufacturing, storage, and distribution. Its strategic location near major highways ensures easy transportation of goods and materials, minimizing logistical challenges for businesses. The warehouse features loading docks, high ceilings, and dedicated office space, providing a functional and efficient workspace. Whether you're a manufacturing company in need of production facilities or a logistics firm requiring storage space, this property offers the infrastructure and amenities to support your operations effectively.",
+      "price": "35,00,000",
+      "status": "Sale",
+      "area": "20,000 sq ft",
+      "location": "Industrial Park, Khulna",
+      "city": "Khulna",
+      "facilities": [
+        "Loading docks",
+        "High ceilings",
+        "Office space"
+      ],
+      "view_property_button": "https://example.com/view_property/3",
+      "contact_person": "Michael Johnson",
+      "contact_number": "+8801122334455"
+    },
+    {
+      "id": 4,
+      "segment_name": "Commercial",
+      "estate_title": "Restaurant Space with Patio",
+      "image": "https://i.ibb.co/zhrzVhj/restaurant.jpg",
+      "description": "Turnkey restaurant space with outdoor patio. Located in popular dining district. This turnkey restaurant space offers a unique opportunity for restaurateurs to establish a presence in a vibrant dining district. The property features a fully equipped commercial kitchen, a stylish bar area, and an inviting outdoor patio, perfect for al fresco dining experiences. With its prime location and attractive amenities, this space is well-suited for both seasoned restaurateurs and aspiring chefs looking to capitalize on the city's bustling food scene.",
+      "price": "80,000/month",
+      "status": "Rent",
+      "area": "3,500 sq ft",
+      "location": "Restaurant Row, Rajshahi",
+      "city": "Rajshahi",
+      "facilities": [
+        "Commercial kitchen",
+        "Bar area",
+        "Outdoor seating"
+      ],
+      "view_property_button": "https://example.com/view_property/4",
+      "contact_person": "Sarah Lee",
+      "contact_number": "+8809988776655"
+    },
+    {
+      "id": 5,
+      "segment_name": "Commercial",
+      "estate_title": "High-End Office Suites",
+      "image": "https://i.ibb.co/6y4ZMss/office.jpg",
+      "description": "Luxurious office suites with state-of-the-art amenities. Ideal for executive tenants. These luxurious office suites offer a premium work environment tailored to the needs of executive tenants. Located in the prestigious Financial District, the property features state-of-the-art amenities, including executive boardrooms, catering services, and gym facilities. With its elegant design and premium facilities, this property provides an exclusive setting for businesses looking to elevate their corporate image and provide a high-quality workspace for their employees.",
+      "price": "15,000/month",
+      "status": "Rent",
+      "area": "5,000 sq ft",
+      "location": "Financial District, Barisal",
+      "city": "Barisal",
+      "facilities": [
+        "Executive boardrooms",
+        "Catering services",
+        "Gym facilities"
+      ],
+      "view_property_button": "https://example.com/view_property/5",
+      "contact_person": "David Brown",
+      "contact_number": "+8801122334455"
+    },
+    {
+      "id": 6,
+      "segment_name": "Commercial",
+      "estate_title": "Tech Startup Incubator Space",
+      "image": "https://i.ibb.co/wrkLhQd/startup.jpg",
+      "description": "Collaborative workspace designed for tech startups. Access to mentorship programs and networking events. This collaborative workspace is specifically designed to nurture and support tech startups on their entrepreneurial journey. Tenants have access to mentorship programs, networking events, and a vibrant community of like-minded innovators, fostering collaboration and creativity. The space offers high-speed internet connectivity, well-equipped meeting rooms, and a cozy coffee bar where ideas can flourish. Whether you're a fledgling startup or a seasoned entrepreneur, this property provides the ideal environment to fuel your success.",
+      "price": "2,500/month per desk",
+      "status": "Rent",
+      "area": "Shared workspace",
+      "location": "Innovation District, Sylhet",
+      "city": "Sylhet",
+      "facilities": [
+        "High-speed internet",
+        "Meeting rooms",
+        "Coffee bar"
+      ],
+      "view_property_button": "https://example.com/view_property/6",
+      "contact_person": "Emma White",
+      "contact_number": "+8809988776655"
+    },
+    {
+      "id": 7,
+      "segment_name": "Commercial",
+      "estate_title": "Entertainment Venue",
+      "image": "https://i.ibb.co/LxFbXDY/entertainment.jpg",
+      "description": "Versatile event space suitable for concerts, conferences, and private functions. This versatile event space offers a dynamic setting for a wide range of gatherings, from concerts and conferences to private functions and parties. The venue is equipped with a stage and lighting setup to accommodate performances, bar facilities to cater to guests, and VIP lounges for exclusive experiences. With its flexible layout and prime location in the Entertainment District, this property provides an ideal venue for memorable events and unforgettable experiences.",
+      "price": "20,000/night",
+      "status": "Rent",
+      "area": "10,000 sq ft",
+      "location": "Entertainment District, Rangpur",
+      "city": "Rangpur",
+      "facilities": [
+        "Stage and lighting setup",
+        "Bar facilities",
+        "VIP lounges"
+      ],
+      "view_property_button": "https://example.com/view_property/7",
+      "contact_person": "James Wilson",
+      "contact_number": "+8801122334455"
+    },
+    {
+      "id": 8,
+      "segment_name": "Commercial",
+      "estate_title": "Historic Warehouse Conversion",
+      "image": "https://i.ibb.co/nks0GGw/historic.jpg",
+      "description": "Charming warehouse converted into mixed-use space. Retains original architectural features.",
+      "price": "7,500,000",
+      "status": "Sale",
+      "area": "25,000 sq ft",
+      "location": "Arts District, Dhaka",
+      "city": "Dhaka",
+      "facilities": [
+        "Loft-style apartments",
+        "Art studios",
+        "Retail shops"
+      ],
+      "view_property_button": "https://example.com/view_property/8",
+      "contact_person": "Olivia Green",
+      "contact_number": "+8809988776655"
+    },
+    {
+      "id": 9,
+      "segment_name": "Commercial",
+      "estate_title": "Health and Wellness Center",
+      "image": "https://i.ibb.co/XSyLcD7/medical.jpg",
+      "description": "Integrated health center offering fitness classes, spa treatments, and holistic therapies. This integrated health center provides a holistic approach to wellness, offering a range of fitness classes, spa treatments, and holistic therapies. Whether you're looking to improve your physical fitness, relax and rejuvenate your body, or restore balance and harmony to your mind, this center has something for everyone. The facility features a fitness studio, steam rooms, and treatment rooms, providing a comprehensive wellness experience in a tranquil and serene environment.",
+      "price": "1,000,000",
+      "status": "Sale",
+      "area": "6,000 sq ft",
+      "location": "Suburban Area, Dhaka",
+      "city": "Dhaka",
+      "facilities": [
+        "Fitness studio",
+        "Steam rooms",
+        "Treatment rooms"
+      ],
+      "view_property_button": "https://example.com/view_property/9",
+      "contact_person": "Sophia Johnson",
+      "contact_number": "+8801122334455"
+    }
+  ]
+}
