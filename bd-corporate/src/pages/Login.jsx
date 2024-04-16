@@ -46,7 +46,6 @@ const Login = () => {
                 navigate('/')
             })
             .catch(() => toast.error("Something wrong!"))
-
     }
 
     return (

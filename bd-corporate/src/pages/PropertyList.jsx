@@ -73,7 +73,7 @@ const PropertyList = () => {
             <div>
                 <div className="mt-24 container mx-auto space-y-4 w-full">
                     <h1 className="text-center font-bold text-2xl lg:text-3xl">Our Properties</h1>
-                    <p className="text-center">Start your property search here.</p>
+                    <p className="text-center">Start your estates search here.</p>
                     <div className="block lg:grid lg:grid-cols-5 lg:py-12 gap-6 w-full">
                         <div className="w-full">
                             <div className="card bg-base-100 shadow-xl rounded-none w-full">

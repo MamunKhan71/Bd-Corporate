@@ -74,6 +74,19 @@ const Register = () => {
             toast.error(e.message);
         }
     };
+    const handleGithubSignUp = async () => {
+        try {
+            const res = await gitHubSignIn();
+            setLogStatus('User Created Successfully!', {
+                style: { background: '#181A20', color: 'white' }
+            });
+            await logout();
+            toast.info("Account Created, Please Login!");
+            navigate('/login');
+        } catch (e) {
+            toast.error(e.message);
+        }
+    };
 
 
     return (
@@ -88,7 +101,7 @@ const Register = () => {
                         <p className="text-primary text-center text-sm">Sign up to access your account</p>
                         <p className="font-bold text-center animate__animated animate__flipInX">{logStatus}</p>
                         <div className="flex gap-5 w-full">
-                            <button onClick={gitHubSignIn} className="btn flex-1 rounded-none">
+                            <button onClick={handleGithubSignUp} className="btn flex-1 rounded-none">
                                 <img className="h-6 w-6" src="/images/github-mark.svg" alt="" />
                                 <span className="text-primary font-medium font-base">GitHub</span>
                             </button>
