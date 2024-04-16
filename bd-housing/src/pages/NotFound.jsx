@@ -8,7 +8,7 @@ const NotFound = () => {
             <Helmet>
                 <title>BDCorporate | 404 Not Found</title>
             </Helmet>
-            <section className="relative z-10 bg-primary h-dvh flex items-center justify-center bg-[url(/images/Hexagon.svg)]">
+            <section className="relative z-10 bg-primary h-dvh flex items-center justify-center bg-[url(/images/Hexagon.svg)] px-4 lg:px-0">
                 <div className="container mx-auto">
                     <div className="-mx-4 flex">
                         <div className="w-full px-4 animate__animated animate__bounceIn">

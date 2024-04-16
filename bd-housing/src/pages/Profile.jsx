@@ -26,7 +26,7 @@ const Profile = () => {
             .catch(() => toast.error("Something went wrong!"));
     }
     return (
-        <div className="w-full flex justify-center items-center h-screen">
+        <div className="w-full flex justify-center items-center h-screen px-4 lg:px-0">
 
             {
                 location.state ? <Helmet>
@@ -58,10 +58,10 @@ const Profile = () => {
                                 <h1 className="text-center font-bold">Update Profile</h1>
                                 <hr />
                                 <form onSubmit={handleSubmit(profileUpdate)} className="space-y-4">
-                                    <div className="flex flex-col gap-6 w-full">
+                                    <div className="flex flex-col gap-6">
                                         <div className="space-y-4">
-                                            <div className="flex gap-4">
-                                                <div className="flex flex-col gap-2">
+                                            <div className="flex flex-col lg:flex-row gap-4">
+                                                <div className="flex flex-col gap-2 w-full">
                                                     <span className="label-text font-semibold text-primary">Name</span>
                                                     <input {...register('name')} type="text" defaultValue={user.displayName || 'Type Here'} className="input input-bordered input-accent w-full rounded-none" />
                                                 </div>

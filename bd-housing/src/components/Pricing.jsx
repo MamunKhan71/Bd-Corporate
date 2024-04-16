@@ -1,18 +1,18 @@
 const Pricing = () => {
     return (
         <div>
-            <section className="py-20 text-primary">
-                <div className="container px-4 mx-auto">
+            <section className="text-primary">
+                <div className="container mx-auto">
                     <div className="max-w-2xl mx-auto mb-16 text-center space-y-4">
-                        <span className="text-4xl font-bold tracking-wider text-primary lg:text-5xl">Membership Plans</span>
-                        <h2 className="font-bold">Explore a wide range of plans to suit your needs.</h2>
+                        <span className="text-2xl lg:text-3xl font-bold">Membership Plans</span>
+                        <p className="text-gray-500 font-medium text-center">Explore a wide range of plans to suit your needs.</p>
                     </div>
                     <div className="flex flex-wrap items-stretch">
                         <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
                             <div className="flex flex-grow flex-col p-6 space-y-6 rounded-none sm:p-8 border-2 border-[#eb675314] ">
                                 <div className="space-y-2">
                                     <h4 className="text-2xl font-bold">Basic</h4>
-                                    <span className="text-6xl font-bold">Free</span>
+                                    <span className="text-4xl lg:text-5xl font-bold">Free</span>
                                 </div>
                                 <p className="mt-3 leading-relaxed text-primary">Basic listing submission, active for 30
                                     days</p>
@@ -55,7 +55,7 @@ const Pricing = () => {
                             <div className="flex flex-grow flex-col p-6 space-y-6 rounded-none bg-[#eb675314] sm:p-8  text-gray-900">
                                 <div className="space-y-2">
                                     <h4 className="text-2xl font-bold">Business</h4>
-                                    <span className="text-6xl font-bold">$999.00
+                                    <span className="text-4xl lg:text-5xl font-bold">$999.00
                                     </span>
                                 </div>
                                 <p className="leading-relaxed">Business listing submission, active for
@@ -100,7 +100,7 @@ const Pricing = () => {
                             <div className="flex flex-grow flex-col p-6 space-y-6 rounded-none sm:p-8 bg-white border-2 border-[#eb675314] ">
                                 <div className="space-y-2">
                                     <h4 className="text-2xl font-bold">Professional</h4>
-                                    <span className="text-6xl font-bold">$599.00
+                                    <span className="text-4xl lg:text-5xl font-bold">$599.00
                                     </span>
                                 </div>
                                 <p className="leading-relaxed text-primary">Professional listing submission, active

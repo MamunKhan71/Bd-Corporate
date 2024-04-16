@@ -68,7 +68,7 @@ const Navbar = () => {
                             {
                                 location === '/login' ? <><Link
                                     to="/register"
-                                    className="px-5 py-2.5 overflow-hidden group bg-primary relative hover:bg-gradient-to-r hover:from-black hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300"
+                                    className="px-5 py-1 lg:2.5 overflow-hidden group bg-primary relative hover:bg-gradient-to-r hover:from-black hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300"
                                 >
                                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease" />
                                     <div className="flex gap-1 items-center">
@@ -77,7 +77,7 @@ const Navbar = () => {
                                     </div>
                                 </Link></> : <><Link
                                     to="/login"
-                                    className="px-5 py-2.5 overflow-hidden group bg-primary relative hover:bg-gradient-to-r hover:from-black hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300"
+                                    className="px-5 py-1 lg:2.5 overflow-hidden group bg-primary relative hover:bg-gradient-to-r hover:from-black hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300"
                                 >
                                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease" />
                                     <div className="flex gap-1 items-center">

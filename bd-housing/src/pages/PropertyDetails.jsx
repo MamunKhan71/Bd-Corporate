@@ -34,7 +34,7 @@ const PropertyDetails = () => {
                 </> :
 
                 <>
-                    <div className="container mx-auto space-y-4 lg:space-y-8 my-6 lg:my-12 p-4">
+                    <div className="container mx-auto space-y-4 lg:space-y-8 my-6 lg:my-12 px-4 lg:px-0">
                         <div className="w-full lg:h-[600px] flex items-center justify-center bg-[url(/images/wavey-fingerprint.svg)]">
                             <img className="lg:h-96 lg:w-96 object-cover ring-2 ring-offset-4 shadow-2xl" src={data.image} alt="header" />
                         </div>

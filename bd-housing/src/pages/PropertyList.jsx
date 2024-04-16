@@ -37,7 +37,7 @@ const PropertyList = () => {
         setFilteredData((propertyData.filter(data => parseInt(data.price.split('/')[0].replaceAll(',', '')) <= parseInt(value))));
     }
     return (
-        <div className="w-full container mx-auto mt-12 animate__animated animate__fadeIn">
+        <div className="w-full container mx-auto mt-12 animate__animated animate__fadeIn px-4 lg:px-0">
             <Helmet>
                 <title>BDCorporate | Property Lists</title>
             </Helmet>
@@ -72,7 +72,7 @@ const PropertyList = () => {
             </div>
             <div>
                 <div className="mt-24 container mx-auto space-y-4 w-full">
-                    <h1 className="text-center font-bold text-2xl lg:text-3xl">Our Featured Properties</h1>
+                    <h1 className="text-center font-bold text-2xl lg:text-3xl">Our Properties</h1>
                     <p className="text-center">Start your property search here.</p>
                     <div className="block lg:grid lg:grid-cols-5 lg:py-12 gap-6 w-full">
                         <div className="w-full">

@@ -9,7 +9,7 @@ const ContactUs = () => {
                         <title>BDCorporate | Contact Us</title>
                     </Helmet>
                     {/* Container for demo purpose */}
-                    <div className="container my-12 lg:my-24 mx-auto md:px-6 animate__animated animate__fadeIn p-4">
+                    <div className="container mx-auto md:px-6 animate__animated animate__fadeIn px-4 lg:px-0">
                         {/* Section: Design Block */}
                         <section className="mb-16 lg:mb-32">
                             <div className="flex justify-center">

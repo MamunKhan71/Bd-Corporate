@@ -22,21 +22,23 @@ const Home = () => {
             <div className="h-[80dvh]">
                 <Hero />
             </div>
-            <div className="space-y-48">
+            <div className="space-y-24 lg:space-y-48">
                 <CompanySlider />
-                <About />
-                <Cities />
-                <Features />
-                <Pricing />
-                <FeaturedSection />
-                <FeaturedProperties />
-                <Testimonial />
-                <ContactSection />
-                <ScrollToTop
-                    smooth
-                    viewBox="0 0 28 28"
-                    component={<MdOutlineVerticalAlignTop className="text-4xl text-white bg-primary h-12 w-12" />}
-                />
+                <div className="space-y-24 lg:space-y-48 px-4 lg:px-0">
+                    <About />
+                    <Cities />
+                    <Features />
+                    <Pricing />
+                    <FeaturedSection />
+                    <FeaturedProperties />
+                    <Testimonial />
+                    <ContactSection />
+                    <ScrollToTop
+                        smooth
+                        viewBox="0 0 28 28"
+                        component={<MdOutlineVerticalAlignTop className="text-4xl text-white bg-primary h-12 w-12" />}
+                    />
+                </div>
             </div>
 
         </div>

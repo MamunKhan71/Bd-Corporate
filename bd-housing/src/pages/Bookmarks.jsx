@@ -24,8 +24,8 @@ const Bookmarks = () => {
             {
                 data ? <>
 
-                    <div className="text-primary">
-                        <h1 className="text-center my-12 text-primary text-4xl font-bold">Bookmarks</h1>
+                    <div className="text-primary px-4 lg:px-0">
+                        <h1 className="text-center my-12 text-primary text-2xl lg:text-4xl font-bold">Bookmarks</h1>
                         <div className="flex flex-col gap-6">
                             {
                                 data.map(dta => (<>
@@ -57,10 +57,10 @@ const Bookmarks = () => {
                         </div>
                     </div>
                 </> :
-                    <div className=" h-dvh flex items-center justify-center">
+                    <div className=" h-dvh flex items-center justify-center px-4 lg:px-0">
                         <div className="text-center flex items-center justify-center flex-col space-y-4">
                             <img className="w-64 h-64" src="/images/notfound.jpg" alt="" />
-                            <h1 className="mb-4 text-6xl font-semibold text-red-500">No Bookmarks Found</h1>
+                            <h1 className="mb-4 text-4xl lg:text-5xl font-semibold text-red-500">No Bookmarks Found</h1>
                             <p className="mb-4 text-lg text-gray-600">Please add bookmarks to see here</p>
                             <div className="animate-bounce">
                                 <svg className="mx-auto h-16 w-16 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

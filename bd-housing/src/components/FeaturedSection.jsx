@@ -15,12 +15,12 @@ const FeaturedSection = () => {
     }
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="w-full">
+        <div className="flex flex-col lg:flex-row justify-between">
+            <div className="w-full flex-1">
                 <img className="w-full lg:h-[700px] object-cover" src={data.image} alt="featured" />
             </div>
-            <div className="bg-[#eb675314] flex items-center justify-center flex-col my-6 p-4">
-                <div className="space-y-8">
+            <div className="bg-[#eb675314] flex items-center justify-center flex-col flex-1">
+                <div className="space-y-4 lg:space-y-8 lg:my-0 p-4 lg:p-8 w-full">
                     <div className="flex gap-4">
                         <button className="btn bg-[#EB6753] text-white rounded-none">
                             <img width="20" height="20" src="https://img.icons8.com/external-jumpicon-line-ayub-irawan/32/FFFFFF/external-dot-basic-ui-jumpicon-line-jumpicon-line-ayub-irawan-2.png" alt="external-dot-basic-ui-jumpicon-line-jumpicon-line-ayub-irawan-2" />Featured
@@ -61,7 +61,7 @@ const FeaturedSection = () => {
                             <p className="font-bold text-primary">agent@apus.com</p>
                         </div>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full lg:w-1/2">
                         <Link to={`properties/${data.id}`} className="hover:cursor-pointer w-full relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-primary text-white hover:bg-primary group">
                             <span className="w-48 h-48 rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                             <span className="text-center relative w-full transition-colors duration-300 ease-in-out text-white group-hover:text-white inline-flex items-center gap-2 justify-center font-bold">See Details <TbArrowUpRight /></span>

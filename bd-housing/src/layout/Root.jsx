@@ -8,7 +8,9 @@ const Root = () => {
     return (
         <div className="font-poppins">
             <Navbar />
-            <Outlet />
+            <div>
+                <Outlet />
+            </div>
             <Footer />
             <ToastContainer
                 position="bottom-center"

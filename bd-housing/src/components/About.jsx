@@ -1,7 +1,7 @@
 import { FaRegQuestionCircle } from "react-icons/fa";
 const About = () => {
     return (
-        <div className="my-12 lg:my-24 container mx-auto">
+        <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 w-full">
                 <div className="bg-[url(/images/PolygonLuminary.svg)] rounded-none w-full h-full p-12 bg-cover space-y-6 text-white">
                     <h1 className="text-white font-semibold text-4xl max-w-md">The New Way to Find
@@ -9,10 +9,10 @@ const About = () => {
                     <p>From as low as $10 per day with
                         limited time offer discounts.</p>
                     <button className="btn bg-primary text-white rounded-none">
-                        How it works <FaRegQuestionCircle className="text-xl" />
+                        How it works <FaRegQuestionCircle className="text-lg lg:text-xl" />
                     </button>
                 </div>
-                <div className="grid grid-cols-2 gap-4 lg:gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
                         <div className="flex justify-end">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
@@ -26,8 +26,8 @@ const About = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <h1 className="text-[#EB6753] text-2xl font-bold">01</h1>
-                        <p className="font-bold text-xl text-primary">Find Your Perfect Space</p>
+                        <h1 className="text-[#EB6753] text-lg :text-2xl font-bold">01</h1>
+                        <p className="font-bold text-lg lg:text-xl text-primary">Find Your Perfect Space</p>
                         <p className="text-[#717171]">Narrow your search by property type, size, and location.</p>
                     </div>
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
@@ -43,8 +43,8 @@ const About = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <h1 className="text-[#EB6753] text-2xl font-bold">02</h1>
-                        <p className="font-bold text-xl text-primary">Browse by Property Type</p>
+                        <h1 className="text-[#EB6753] text-lg :text-2xl font-bold">02</h1>
+                        <p className="font-bold text-lg lg:text-xl text-primary">Browse by Property Type</p>
                         <p className="text-[#717171]">Explore office, retail, industrial, and more.</p>
                     </div>
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
@@ -60,8 +60,8 @@ const About = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <h1 className="text-[#EB6753] text-2xl font-bold">03</h1>
-                        <p className="font-bold text-xl text-primary">Connect with an Agent</p>
+                        <h1 className="text-[#EB6753] text-lg :text-2xl font-bold">03</h1>
+                        <p className="font-bold text-lg lg:text-xl text-primary">Connect with an Agent</p>
                         <p className="text-[#717171]">Get expert guidance to find your ideal space.</p>
                     </div>
                     <div className="border-2 border-[#E9E9E9] p-4 rounded-none">
@@ -77,8 +77,8 @@ const About = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <h1 className="text-[#EB6753] text-2xl font-bold">04</h1>
-                        <p className="font-bold text-xl text-primary">Explore Market Insights</p>
+                        <h1 className="text-[#EB6753] text-lg :text-2xl font-bold">04</h1>
+                        <p className="font-bold text-lg lg:text-xl text-primary">Explore Market Insights</p>
                         <p className="text-[#717171]">Discover trends, success stories, and industry news.</p>
                     </div>
                 </div>

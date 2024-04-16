@@ -1,10 +1,10 @@
 import { TbArrowUpRight } from "react-icons/tb";
 const Features = () => {
     return (
-        <div className="my-12 container mx-auto space-y-4">
-            <h1 className="text-primary font-bold text-center text-2xl lg:text-3xl">See how BDCorporate can help</h1>
+        <div className="container mx-auto space-y-4">
+            <h1 className="text-2xl lg:text-3xl font-bold text-center">See how we can help</h1>
             <p className="text-gray-500 font-medium text-center">Let our expertise guide you to success.</p>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12 lg:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12 lg:pt-24">
                 <div className="card text-neutral-content rounded-none">
                     <div className="card-body items-center text-center text-primary space-y-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none">
