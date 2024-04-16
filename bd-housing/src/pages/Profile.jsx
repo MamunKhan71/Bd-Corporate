@@ -58,14 +58,14 @@ const Profile = () => {
                                 <h1 className="text-center font-bold">Update Profile</h1>
                                 <hr />
                                 <form onSubmit={handleSubmit(profileUpdate)} className="space-y-4">
-                                    <div className="flex flex-col gap-6">
+                                    <div className="flex gap-6">
                                         <div className="space-y-4">
                                             <div className="flex flex-col lg:flex-row gap-4">
-                                                <div className="flex flex-col gap-2 w-full">
+                                                <div className="flex-1 flex flex-col gap-2 w-full">
                                                     <span className="label-text font-semibold text-primary">Name</span>
                                                     <input {...register('name')} type="text" defaultValue={user.displayName || 'Type Here'} className="input input-bordered input-accent w-full rounded-none" />
                                                 </div>
-                                                <div className="flex flex-col gap-2">
+                                                <div className="flex-1 flex flex-col gap-2">
                                                     <span className="label-text font-semibold text-primary">Photo Url</span>
                                                     <input {...register('photoUrl')} type="text" defaultValue={user.photoURL || "Type Here"} className="input input-bordered input-accent w-full rounded-none" />
                                                 </div>
