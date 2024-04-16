@@ -1,7 +1,7 @@
 # BdCorporate Real Estate Website
 
 ## [Firebase Live Link](https://bd-corporate.web.app/)
-## [Netlify Live Link](https://bd-corporate.web.app/)
+## [Netlify Live Link](https://bd-corporate.netlify.app/)
 ## Features
 
 - **Browse Properties:** Users can explore a wide range of properties tailored to their needs, including detailed descriptions, images, and pricing information.
