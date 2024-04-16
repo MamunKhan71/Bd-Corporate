@@ -9,12 +9,12 @@ const ContactUs = () => {
                         <title>BDCorporate | Contact Us</title>
                     </Helmet>
                     {/* Container for demo purpose */}
-                    <div className="container mx-auto md:px-6 animate__animated animate__fadeIn px-4 lg:px-0">
+                    <div className="container mx-auto animate__animated animate__fadeIn px-4 lg:px-0 mt-12">
                         {/* Section: Design Block */}
                         <section className="mb-16 lg:mb-32">
                             <div className="flex justify-center">
                                 <div className="text-center md:max-w-xl lg:max-w-3xl">
-                                    <h2 className="mb-12 px-6 text-3xl font-bold">Contact us</h2>
+                                    <h2 className="mb-12 px-6 text-2xl lg:text-3xl font-bold">Contact us</h2>
                                 </div>
                             </div>
                             <div className="flex flex-wrap">
