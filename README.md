@@ -113,4 +113,16 @@
 ### Property Details Page
 <img src="https://i.ibb.co/2NLPN8r/screencapture-bd-corporate-web-app-properties-9-2024-04-16-11-06-35.png" alt="Property Details Page" width="800">
 
+## Getting Started
+To run the project locally, follow these steps:
+
+1. Clone the client-side repository:
+   ```bash
+   git clone https://github.com/MamunKhan71/Bd-Corporate.git
+2. Install dependencies for both client and server:
+   ```bash
+   npm install
+3. Run the Client:
+   ```bash
+   npm run dev
 
